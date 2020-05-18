@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/main.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/main.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/resources/file.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/resources/file.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build/dep/glad",
+  "command": "/usr/bin/cc -Dglad_EXPORTS -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include  -fPIC   -o CMakeFiles/glad.dir/src/glad.c.o   -c /home/lukasz/projects/cardboard_game_engine/dep/glad/src/glad.c",
+  "file": "/home/lukasz/projects/cardboard_game_engine/dep/glad/src/glad.c"
+}
+]

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../dep/glad/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../dep/glad/include/glad/glad.h
+KHR/khrplatform.h
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
+element_buffer.opengl.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.hpp
+optional
+-
+vector
+-
+glm/glm.hpp
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp
+glad/glad.h
+/home/lukasz/projects/cardboard_game_engine/src/graphics/glad/glad.h
+element_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
+GL/glext.h
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.hpp
+
