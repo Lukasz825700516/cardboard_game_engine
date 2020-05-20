@@ -20,11 +20,12 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 	)
 
 	set(CARDBOARD_GRAPHICS_SOURCES
-		${PROJECT_SOURCE_DIR}/src/graphics/context.opengl.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/shader.opengl.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/vertex_buffer.opengl.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/element_buffer.opengl.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/window.opengl.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/context.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/shader.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_buffer.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/element_buffer.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/window.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/mesh.cpp
 	)
 else()
 	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
@@ -35,9 +36,7 @@ file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${PROJECT_BINARY_DIR})
 set(SOURCES
 	${PROJECT_SOURCE_DIR}/src/main.cpp
 	${PROJECT_SOURCE_DIR}/src/resources/file.cpp
-	${PROJECT_SOURCE_DIR}/src/graphics/vertex_buffer.cpp
 	${PROJECT_SOURCE_DIR}/src/graphics/vertex.cpp
-	${PROJECT_SOURCE_DIR}/src/graphics/element_buffer.cpp
 	${CARDBOARD_GRAPHICS_SOURCES}
 )
 

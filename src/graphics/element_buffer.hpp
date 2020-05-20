@@ -1,6 +1,6 @@
 #pragma once
 
-#include "element_buffer.opengl.hpp"
+#include "opengl/element_buffer.hpp"
 
 #include <optional>
 #include <vector>
@@ -13,12 +13,11 @@ namespace cardboard::graphics {
 
 		std::optional<std::vector<glm::uvec3>> buffer;
 	public:
-		void load();
-		void unload();
-
 		void bind();
 		void update();
+		void flush();
 
 		ElementBuffer(std::vector<glm::uvec3> buffer);
+		~ElementBuffer();
 	};
 }

@@ -103,22 +103,9 @@ CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/resources/file.cpp -o CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o: ../src/graphics/vertex_buffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp
-
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.i
-
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.s
-
 CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
 CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o: ../src/graphics/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp
 
 CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.i: cmake_force
@@ -129,117 +116,115 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o: ../src/graphics/element_buffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o: ../src/graphics/opengl/context.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/context.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/context.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/context.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o: ../src/graphics/context.opengl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../src/graphics/opengl/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o: ../src/graphics/shader.opengl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../src/graphics/opengl/vertex_buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o: ../src/graphics/vertex_buffer.opengl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../src/graphics/opengl/element_buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o: ../src/graphics/element_buffer.opengl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o: ../src/graphics/opengl/window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.s
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
-CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o: ../src/graphics/window.opengl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: CMakeFiles/cardboard_game_engine.dir/flags.make
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.i
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp > CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.i
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.s
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.s
 
 # Object files for target cardboard_game_engine
 cardboard_game_engine_OBJECTS = \
 "CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o" \
 "CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o" \
 "CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o" \
-"CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o"
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o" \
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o" \
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o" \
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o" \
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o" \
+"CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o"
 
 # External object files for target cardboard_game_engine
 cardboard_game_engine_EXTERNAL_OBJECTS =
 
 cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o
 cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o
 cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o
-cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o
+cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o
 cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/build.make
 cardboard_game_engine: /usr/lib/libglfw.so.3.3
 cardboard_game_engine: dep/glad/libglad.so
 cardboard_game_engine: /usr/lib/libGLX.so
 cardboard_game_engine: /usr/lib/libOpenGL.so
 cardboard_game_engine: CMakeFiles/cardboard_game_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable cardboard_game_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable cardboard_game_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cardboard_game_engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

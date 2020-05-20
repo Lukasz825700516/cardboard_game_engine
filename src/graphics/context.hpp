@@ -11,7 +11,7 @@ namespace cardboard::graphics {
 		static void initialize();
 		static void destroy();
 
-		static void set_window(Window window);
+		static void set_window(Window& window);
 
 	};
 }

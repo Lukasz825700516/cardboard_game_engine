@@ -1,6 +1,6 @@
 #pragma once
 
-#include "shader.opengl.hpp"
+#include "opengl/shader.hpp"
 
 namespace cardboard::graphics {
 	class Shader {
@@ -9,8 +9,8 @@ namespace cardboard::graphics {
 
 	public:
 		Shader(const char* vertex_code, const char* fragment_code);
+		~Shader();
 		
-		void destroy();
 		void bind();
 	};
 }

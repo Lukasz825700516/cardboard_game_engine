@@ -1,6 +1,6 @@
 #pragma once
 
-#include "window.opengl.hpp"
+#include "opengl/window.hpp"
 
 namespace cardboard::graphics {
 	class Window {
@@ -14,8 +14,6 @@ namespace cardboard::graphics {
 
 		Window(const char* name, unsigned int width, unsigned int height);
 		~Window();
-
-		void destroy();
 
 		void set_name(const char* name);
 		void set_size(unsigned int width, unsigned int height);

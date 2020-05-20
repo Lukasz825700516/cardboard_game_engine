@@ -4,14 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/context.opengl.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.opengl.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/shader.opengl.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/context.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.opengl.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/window.opengl.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/main.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/resources/file.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/resources/file.cpp.o"
   )

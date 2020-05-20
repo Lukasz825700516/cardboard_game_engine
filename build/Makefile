@@ -156,113 +156,167 @@ glad/fast:
 	$(MAKE) $(MAKESILENT) -f dep/glad/CMakeFiles/glad.dir/build.make dep/glad/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
-src/graphics/context.opengl.o: src/graphics/context.opengl.cpp.o
+src/graphics/opengl/context.o: src/graphics/opengl/context.cpp.o
 
-.PHONY : src/graphics/context.opengl.o
-
-# target to build an object file
-src/graphics/context.opengl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.o
-.PHONY : src/graphics/context.opengl.cpp.o
-
-src/graphics/context.opengl.i: src/graphics/context.opengl.cpp.i
-
-.PHONY : src/graphics/context.opengl.i
-
-# target to preprocess a source file
-src/graphics/context.opengl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.i
-.PHONY : src/graphics/context.opengl.cpp.i
-
-src/graphics/context.opengl.s: src/graphics/context.opengl.cpp.s
-
-.PHONY : src/graphics/context.opengl.s
-
-# target to generate assembly for a file
-src/graphics/context.opengl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/context.opengl.cpp.s
-.PHONY : src/graphics/context.opengl.cpp.s
-
-src/graphics/element_buffer.o: src/graphics/element_buffer.cpp.o
-
-.PHONY : src/graphics/element_buffer.o
+.PHONY : src/graphics/opengl/context.o
 
 # target to build an object file
-src/graphics/element_buffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.o
-.PHONY : src/graphics/element_buffer.cpp.o
+src/graphics/opengl/context.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o
+.PHONY : src/graphics/opengl/context.cpp.o
 
-src/graphics/element_buffer.i: src/graphics/element_buffer.cpp.i
+src/graphics/opengl/context.i: src/graphics/opengl/context.cpp.i
 
-.PHONY : src/graphics/element_buffer.i
+.PHONY : src/graphics/opengl/context.i
 
 # target to preprocess a source file
-src/graphics/element_buffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.i
-.PHONY : src/graphics/element_buffer.cpp.i
+src/graphics/opengl/context.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.i
+.PHONY : src/graphics/opengl/context.cpp.i
 
-src/graphics/element_buffer.s: src/graphics/element_buffer.cpp.s
+src/graphics/opengl/context.s: src/graphics/opengl/context.cpp.s
 
-.PHONY : src/graphics/element_buffer.s
+.PHONY : src/graphics/opengl/context.s
 
 # target to generate assembly for a file
-src/graphics/element_buffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.cpp.s
-.PHONY : src/graphics/element_buffer.cpp.s
+src/graphics/opengl/context.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.s
+.PHONY : src/graphics/opengl/context.cpp.s
 
-src/graphics/element_buffer.opengl.o: src/graphics/element_buffer.opengl.cpp.o
+src/graphics/opengl/element_buffer.o: src/graphics/opengl/element_buffer.cpp.o
 
-.PHONY : src/graphics/element_buffer.opengl.o
+.PHONY : src/graphics/opengl/element_buffer.o
 
 # target to build an object file
-src/graphics/element_buffer.opengl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.o
-.PHONY : src/graphics/element_buffer.opengl.cpp.o
+src/graphics/opengl/element_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o
+.PHONY : src/graphics/opengl/element_buffer.cpp.o
 
-src/graphics/element_buffer.opengl.i: src/graphics/element_buffer.opengl.cpp.i
+src/graphics/opengl/element_buffer.i: src/graphics/opengl/element_buffer.cpp.i
 
-.PHONY : src/graphics/element_buffer.opengl.i
+.PHONY : src/graphics/opengl/element_buffer.i
 
 # target to preprocess a source file
-src/graphics/element_buffer.opengl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.i
-.PHONY : src/graphics/element_buffer.opengl.cpp.i
+src/graphics/opengl/element_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.i
+.PHONY : src/graphics/opengl/element_buffer.cpp.i
 
-src/graphics/element_buffer.opengl.s: src/graphics/element_buffer.opengl.cpp.s
+src/graphics/opengl/element_buffer.s: src/graphics/opengl/element_buffer.cpp.s
 
-.PHONY : src/graphics/element_buffer.opengl.s
+.PHONY : src/graphics/opengl/element_buffer.s
 
 # target to generate assembly for a file
-src/graphics/element_buffer.opengl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/element_buffer.opengl.cpp.s
-.PHONY : src/graphics/element_buffer.opengl.cpp.s
+src/graphics/opengl/element_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.s
+.PHONY : src/graphics/opengl/element_buffer.cpp.s
 
-src/graphics/shader.opengl.o: src/graphics/shader.opengl.cpp.o
+src/graphics/opengl/mesh.o: src/graphics/opengl/mesh.cpp.o
 
-.PHONY : src/graphics/shader.opengl.o
+.PHONY : src/graphics/opengl/mesh.o
 
 # target to build an object file
-src/graphics/shader.opengl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.o
-.PHONY : src/graphics/shader.opengl.cpp.o
+src/graphics/opengl/mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o
+.PHONY : src/graphics/opengl/mesh.cpp.o
 
-src/graphics/shader.opengl.i: src/graphics/shader.opengl.cpp.i
+src/graphics/opengl/mesh.i: src/graphics/opengl/mesh.cpp.i
 
-.PHONY : src/graphics/shader.opengl.i
+.PHONY : src/graphics/opengl/mesh.i
 
 # target to preprocess a source file
-src/graphics/shader.opengl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.i
-.PHONY : src/graphics/shader.opengl.cpp.i
+src/graphics/opengl/mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.i
+.PHONY : src/graphics/opengl/mesh.cpp.i
 
-src/graphics/shader.opengl.s: src/graphics/shader.opengl.cpp.s
+src/graphics/opengl/mesh.s: src/graphics/opengl/mesh.cpp.s
 
-.PHONY : src/graphics/shader.opengl.s
+.PHONY : src/graphics/opengl/mesh.s
 
 # target to generate assembly for a file
-src/graphics/shader.opengl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/shader.opengl.cpp.s
-.PHONY : src/graphics/shader.opengl.cpp.s
+src/graphics/opengl/mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.s
+.PHONY : src/graphics/opengl/mesh.cpp.s
+
+src/graphics/opengl/shader.o: src/graphics/opengl/shader.cpp.o
+
+.PHONY : src/graphics/opengl/shader.o
+
+# target to build an object file
+src/graphics/opengl/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o
+.PHONY : src/graphics/opengl/shader.cpp.o
+
+src/graphics/opengl/shader.i: src/graphics/opengl/shader.cpp.i
+
+.PHONY : src/graphics/opengl/shader.i
+
+# target to preprocess a source file
+src/graphics/opengl/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.i
+.PHONY : src/graphics/opengl/shader.cpp.i
+
+src/graphics/opengl/shader.s: src/graphics/opengl/shader.cpp.s
+
+.PHONY : src/graphics/opengl/shader.s
+
+# target to generate assembly for a file
+src/graphics/opengl/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.s
+.PHONY : src/graphics/opengl/shader.cpp.s
+
+src/graphics/opengl/vertex_buffer.o: src/graphics/opengl/vertex_buffer.cpp.o
+
+.PHONY : src/graphics/opengl/vertex_buffer.o
+
+# target to build an object file
+src/graphics/opengl/vertex_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o
+.PHONY : src/graphics/opengl/vertex_buffer.cpp.o
+
+src/graphics/opengl/vertex_buffer.i: src/graphics/opengl/vertex_buffer.cpp.i
+
+.PHONY : src/graphics/opengl/vertex_buffer.i
+
+# target to preprocess a source file
+src/graphics/opengl/vertex_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.i
+.PHONY : src/graphics/opengl/vertex_buffer.cpp.i
+
+src/graphics/opengl/vertex_buffer.s: src/graphics/opengl/vertex_buffer.cpp.s
+
+.PHONY : src/graphics/opengl/vertex_buffer.s
+
+# target to generate assembly for a file
+src/graphics/opengl/vertex_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.s
+.PHONY : src/graphics/opengl/vertex_buffer.cpp.s
+
+src/graphics/opengl/window.o: src/graphics/opengl/window.cpp.o
+
+.PHONY : src/graphics/opengl/window.o
+
+# target to build an object file
+src/graphics/opengl/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o
+.PHONY : src/graphics/opengl/window.cpp.o
+
+src/graphics/opengl/window.i: src/graphics/opengl/window.cpp.i
+
+.PHONY : src/graphics/opengl/window.i
+
+# target to preprocess a source file
+src/graphics/opengl/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.i
+.PHONY : src/graphics/opengl/window.cpp.i
+
+src/graphics/opengl/window.s: src/graphics/opengl/window.cpp.s
+
+.PHONY : src/graphics/opengl/window.s
+
+# target to generate assembly for a file
+src/graphics/opengl/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.s
+.PHONY : src/graphics/opengl/window.cpp.s
 
 src/graphics/vertex.o: src/graphics/vertex.cpp.o
 
@@ -290,87 +344,6 @@ src/graphics/vertex.s: src/graphics/vertex.cpp.s
 src/graphics/vertex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.s
 .PHONY : src/graphics/vertex.cpp.s
-
-src/graphics/vertex_buffer.o: src/graphics/vertex_buffer.cpp.o
-
-.PHONY : src/graphics/vertex_buffer.o
-
-# target to build an object file
-src/graphics/vertex_buffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.o
-.PHONY : src/graphics/vertex_buffer.cpp.o
-
-src/graphics/vertex_buffer.i: src/graphics/vertex_buffer.cpp.i
-
-.PHONY : src/graphics/vertex_buffer.i
-
-# target to preprocess a source file
-src/graphics/vertex_buffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.i
-.PHONY : src/graphics/vertex_buffer.cpp.i
-
-src/graphics/vertex_buffer.s: src/graphics/vertex_buffer.cpp.s
-
-.PHONY : src/graphics/vertex_buffer.s
-
-# target to generate assembly for a file
-src/graphics/vertex_buffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.cpp.s
-.PHONY : src/graphics/vertex_buffer.cpp.s
-
-src/graphics/vertex_buffer.opengl.o: src/graphics/vertex_buffer.opengl.cpp.o
-
-.PHONY : src/graphics/vertex_buffer.opengl.o
-
-# target to build an object file
-src/graphics/vertex_buffer.opengl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.o
-.PHONY : src/graphics/vertex_buffer.opengl.cpp.o
-
-src/graphics/vertex_buffer.opengl.i: src/graphics/vertex_buffer.opengl.cpp.i
-
-.PHONY : src/graphics/vertex_buffer.opengl.i
-
-# target to preprocess a source file
-src/graphics/vertex_buffer.opengl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.i
-.PHONY : src/graphics/vertex_buffer.opengl.cpp.i
-
-src/graphics/vertex_buffer.opengl.s: src/graphics/vertex_buffer.opengl.cpp.s
-
-.PHONY : src/graphics/vertex_buffer.opengl.s
-
-# target to generate assembly for a file
-src/graphics/vertex_buffer.opengl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex_buffer.opengl.cpp.s
-.PHONY : src/graphics/vertex_buffer.opengl.cpp.s
-
-src/graphics/window.opengl.o: src/graphics/window.opengl.cpp.o
-
-.PHONY : src/graphics/window.opengl.o
-
-# target to build an object file
-src/graphics/window.opengl.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.o
-.PHONY : src/graphics/window.opengl.cpp.o
-
-src/graphics/window.opengl.i: src/graphics/window.opengl.cpp.i
-
-.PHONY : src/graphics/window.opengl.i
-
-# target to preprocess a source file
-src/graphics/window.opengl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.i
-.PHONY : src/graphics/window.opengl.cpp.i
-
-src/graphics/window.opengl.s: src/graphics/window.opengl.cpp.s
-
-.PHONY : src/graphics/window.opengl.s
-
-# target to generate assembly for a file
-src/graphics/window.opengl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/window.opengl.cpp.s
-.PHONY : src/graphics/window.opengl.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -436,30 +409,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... cardboard_game_engine"
 	@echo "... glad"
-	@echo "... src/graphics/context.opengl.o"
-	@echo "... src/graphics/context.opengl.i"
-	@echo "... src/graphics/context.opengl.s"
-	@echo "... src/graphics/element_buffer.o"
-	@echo "... src/graphics/element_buffer.i"
-	@echo "... src/graphics/element_buffer.s"
-	@echo "... src/graphics/element_buffer.opengl.o"
-	@echo "... src/graphics/element_buffer.opengl.i"
-	@echo "... src/graphics/element_buffer.opengl.s"
-	@echo "... src/graphics/shader.opengl.o"
-	@echo "... src/graphics/shader.opengl.i"
-	@echo "... src/graphics/shader.opengl.s"
+	@echo "... src/graphics/opengl/context.o"
+	@echo "... src/graphics/opengl/context.i"
+	@echo "... src/graphics/opengl/context.s"
+	@echo "... src/graphics/opengl/element_buffer.o"
+	@echo "... src/graphics/opengl/element_buffer.i"
+	@echo "... src/graphics/opengl/element_buffer.s"
+	@echo "... src/graphics/opengl/mesh.o"
+	@echo "... src/graphics/opengl/mesh.i"
+	@echo "... src/graphics/opengl/mesh.s"
+	@echo "... src/graphics/opengl/shader.o"
+	@echo "... src/graphics/opengl/shader.i"
+	@echo "... src/graphics/opengl/shader.s"
+	@echo "... src/graphics/opengl/vertex_buffer.o"
+	@echo "... src/graphics/opengl/vertex_buffer.i"
+	@echo "... src/graphics/opengl/vertex_buffer.s"
+	@echo "... src/graphics/opengl/window.o"
+	@echo "... src/graphics/opengl/window.i"
+	@echo "... src/graphics/opengl/window.s"
 	@echo "... src/graphics/vertex.o"
 	@echo "... src/graphics/vertex.i"
 	@echo "... src/graphics/vertex.s"
-	@echo "... src/graphics/vertex_buffer.o"
-	@echo "... src/graphics/vertex_buffer.i"
-	@echo "... src/graphics/vertex_buffer.s"
-	@echo "... src/graphics/vertex_buffer.opengl.o"
-	@echo "... src/graphics/vertex_buffer.opengl.i"
-	@echo "... src/graphics/vertex_buffer.opengl.s"
-	@echo "... src/graphics/window.opengl.o"
-	@echo "... src/graphics/window.opengl.i"
-	@echo "... src/graphics/window.opengl.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

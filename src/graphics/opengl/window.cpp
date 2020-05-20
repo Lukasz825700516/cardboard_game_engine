@@ -1,9 +1,11 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include "window.hpp"
-
+#include "../window.hpp"
 namespace cardboard::graphics {
-	Window::Window(const char* name, unsigned int width, unsigned int height) {
+	Window::Window(const char* name, unsigned int width, unsigned int height):
+   		width(width),
+		height(height) {
+
 		data.window = glfwCreateWindow(width, height, name, 0, 0);
 		if (!data.window) {
 			std::cerr << "Failed to create window!" << std::endl;
@@ -11,9 +13,6 @@ namespace cardboard::graphics {
 	}
 
 	Window::~Window() {
-	}
-
-	void Window::destroy() {
 		glfwDestroyWindow(data.window);
 	}
 
