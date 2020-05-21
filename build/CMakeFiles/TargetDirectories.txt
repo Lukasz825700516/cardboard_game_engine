@@ -1,6 +1,0 @@
-/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/rebuild_cache.dir
-/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/edit_cache.dir
-/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir
-/home/lukasz/projects/cardboard_game_engine/build/dep/glad/CMakeFiles/rebuild_cache.dir
-/home/lukasz/projects/cardboard_game_engine/build/dep/glad/CMakeFiles/edit_cache.dir
-/home/lukasz/projects/cardboard_game_engine/build/dep/glad/CMakeFiles/glad.dir

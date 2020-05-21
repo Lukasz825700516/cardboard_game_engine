@@ -48,32 +48,31 @@ namespace cardboard::graphics {
 			QuadRenderer::flush();
 			QuadRenderer::create_batch();
 
-		} else {
-			vb[QuadRenderer::drawn_vertexes + 0] =
-				Vertex(position, glm::vec2(0, 0));
+		} 
+		vb[QuadRenderer::drawn_vertexes + 0] =
+			Vertex(position, glm::vec2(0, 0));
 
-			vb[QuadRenderer::drawn_vertexes + 1] =
-				Vertex(position + glm::vec2(size.x, 0), glm::vec2(size.x, 0));
+		vb[QuadRenderer::drawn_vertexes + 1] =
+			Vertex(position + glm::vec2(size.x, 0), glm::vec2(size.x, 0));
 
-			vb[QuadRenderer::drawn_vertexes + 2] =
-				Vertex(position + glm::vec2(0, size.y), glm::vec2(0, size.y));
+		vb[QuadRenderer::drawn_vertexes + 2] =
+			Vertex(position + glm::vec2(0, size.y), glm::vec2(0, size.y));
 
-			vb[QuadRenderer::drawn_vertexes + 3] =
-				Vertex(position + size, size);
+		vb[QuadRenderer::drawn_vertexes + 3] =
+			Vertex(position + size, size);
 
-			eb[QuadRenderer::drawn_elements + 0] = glm::uvec3(
-				QuadRenderer::drawn_vertexes + 0,
-				QuadRenderer::drawn_vertexes + 1,
-				QuadRenderer::drawn_vertexes + 2);
+		eb[QuadRenderer::drawn_elements + 0] = glm::uvec3(
+			QuadRenderer::drawn_vertexes + 0,
+			QuadRenderer::drawn_vertexes + 1,
+			QuadRenderer::drawn_vertexes + 2);
 
-			eb[QuadRenderer::drawn_elements + 1] = glm::uvec3(
-				QuadRenderer::drawn_vertexes + 3,
-				QuadRenderer::drawn_vertexes + 2,
-				QuadRenderer::drawn_vertexes + 1);
+		eb[QuadRenderer::drawn_elements + 1] = glm::uvec3(
+			QuadRenderer::drawn_vertexes + 3,
+			QuadRenderer::drawn_vertexes + 2,
+			QuadRenderer::drawn_vertexes + 1);
 
-			QuadRenderer::drawn_vertexes += vertexes_to_add;
-			QuadRenderer::drawn_elements += elements_to_add;
-		}
+		QuadRenderer::drawn_vertexes += vertexes_to_add;
+		QuadRenderer::drawn_elements += elements_to_add;
 	}
 
 	void QuadRenderer::flush() {

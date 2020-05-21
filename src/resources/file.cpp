@@ -7,7 +7,7 @@
 #include <iostream>
 
 namespace cardboard::resources {
-	std::optional<std::string> File::load_file_content(const char* path) {
+	std::optional<std::string> File::read(const char* path) {
 		std::ifstream file(path, std::fstream::in);
 
 		if (!file.good()) {

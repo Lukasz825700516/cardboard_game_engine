@@ -6,6 +6,6 @@
 namespace cardboard::resources {
 	class File {
 	public:
-		static std::optional<std::string> load_file_content(const char* path);
+		static std::optional<std::string> read(const char* path);
 	};
 }
