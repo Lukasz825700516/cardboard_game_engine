@@ -18,9 +18,53 @@ stdint.h
 KHR/khrplatform.h
 -
 
+../src/graphics/element_buffer.hpp
+opengl/element_buffer.hpp
+../src/graphics/opengl/element_buffer.hpp
+glm/fwd.hpp
+-
+optional
+-
+vector
+-
+glm/glm.hpp
+-
+
 ../src/graphics/opengl/element_buffer.hpp
 
+../src/graphics/opengl/vertex_array.hpp
+utility
+-
+
 ../src/graphics/opengl/vertex_buffer.hpp
+
+../src/graphics/vertex.hpp
+glm/fwd.hpp
+-
+glm/glm.hpp
+-
+
+../src/graphics/vertex_array.hpp
+opengl/vertex_array.hpp
+../src/graphics/opengl/vertex_array.hpp
+vertex_buffer.hpp
+../src/graphics/vertex_buffer.hpp
+element_buffer.hpp
+../src/graphics/element_buffer.hpp
+
+../src/graphics/vertex_buffer.hpp
+opengl/vertex_buffer.hpp
+../src/graphics/opengl/vertex_buffer.hpp
+vertex.hpp
+../src/graphics/vertex.hpp
+optional
+-
+vector
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/context.hpp
+window.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
 
 /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
 opengl/element_buffer.hpp
@@ -34,19 +78,43 @@ vector
 glm/glm.hpp
 -
 
-/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/quad_renderer.cpp
+../quad_renderer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/quad_renderer.hpp
 glad/glad.h
 /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/glad/glad.h
-../element_buffer.hpp
-/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
-graphics/opengl/element_buffer.hpp
-/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/graphics/opengl/element_buffer.hpp
-glm/glm.hpp
+graphics/element_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/graphics/element_buffer.hpp
+graphics/vertex.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/graphics/vertex.hpp
+graphics/vertex_array.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/graphics/vertex_array.hpp
+graphics/vertex_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/graphics/vertex_buffer.hpp
+GL/gl.h
 -
+glm/fwd.hpp
+-
+memory
+-
+vector
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.cpp
+glad/glad.h
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/glad/glad.h
+../vertex_array.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_array.hpp
+../context.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/context.hpp
 utility
 -
 
-/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.hpp
+utility
+-
 
 /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp
 glad/glad.h
@@ -60,11 +128,31 @@ utility
 
 /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.hpp
 
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
+GLFW/glfw3.h
+-
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/quad_renderer.hpp
+graphics/vertex_array.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/graphics/vertex_array.hpp
+glm/glm.hpp
+-
+memory
+-
+
 /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
 glm/fwd.hpp
 -
 glm/glm.hpp
 -
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_array.hpp
+opengl/vertex_array.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.hpp
+vertex_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.hpp
+element_buffer.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
 
 /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.hpp
 opengl/vertex_buffer.hpp
@@ -75,4 +163,8 @@ optional
 -
 vector
 -
+
+/home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
+opengl/window.hpp
+/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
 

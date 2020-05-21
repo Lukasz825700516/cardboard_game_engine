@@ -16,6 +16,7 @@ namespace cardboard::graphics {
 	public:
 		void bind();
 		void flush();
+		inline void resize(unsigned int size) { this->buffer.resize(size); }
 
 		ElementBuffer();
 		ElementBuffer(ElementBuffer&& eb);

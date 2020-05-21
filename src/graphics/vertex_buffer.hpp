@@ -15,6 +15,7 @@ namespace cardboard::graphics {
 	public:
 		void bind();
 		void flush();
+		inline void resize(unsigned int size) { this->buffer.resize(size); }
 
 		VertexBuffer();
 		VertexBuffer(VertexBuffer&& vb);

@@ -2,6 +2,7 @@
 
 #include "graphics/vertex_array.hpp"
 #include <glm/glm.hpp>
+#include <memory>
 namespace cardboard::graphics {
 	class QuadRenderer {
 	private:
@@ -11,7 +12,7 @@ namespace cardboard::graphics {
 		static unsigned int max_vertexes;
 		static unsigned int max_elements;
 
-		static VertexArray vertex_array;
+		static std::unique_ptr<VertexArray> vertex_array;
 
 	public:
 		static void initialize(unsigned int max_vertexes, unsigned int max_elements);

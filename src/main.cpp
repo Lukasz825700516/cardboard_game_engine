@@ -1,4 +1,5 @@
 #include <glm/fwd.hpp>
+
 #include <iostream>
 #include <vector>
 #include "graphics/context.hpp"
@@ -8,8 +9,7 @@
 #include "resources/file.hpp"
 #include "graphics/quad_renderer.hpp"
 
-int main()
-{
+int main() {
 	cardboard::graphics::Context::initialize();
 	cardboard::graphics::Window win("hello", 800, 600);
 	cardboard::graphics::Context::set_window(win);

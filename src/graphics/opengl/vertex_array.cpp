@@ -6,7 +6,6 @@
 namespace cardboard::graphics {
 	VertexArrayPlatformData::VertexArrayPlatformData() {
 		glad_glGenVertexArrays(1, &this->vertex_buffer_array);
-		glad_glBindVertexArray(this->vertex_buffer_array);
 	}
 
 	VertexArrayPlatformData::VertexArrayPlatformData(VertexArrayPlatformData&& data):
@@ -18,6 +17,9 @@ namespace cardboard::graphics {
 	}
 
 	VertexArray::VertexArray() {
+		this->bind();
+		this->vb.flush();
+		this->eb.flush();
 
 		glad_glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE,
 			sizeof(Vertex),
