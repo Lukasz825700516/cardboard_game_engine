@@ -10,23 +10,22 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o: ../src/g
 
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../dep/glad/include/KHR/khrplatform.h
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../dep/glad/include/glad/glad.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../src/graphics/opengl/element_buffer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../src/graphics/element_buffer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../src/graphics/opengl/element_buffer.cpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o: ../src/graphics/opengl/element_buffer.hpp
 
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../dep/glad/include/KHR/khrplatform.h
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../dep/glad/include/glad/glad.h
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/context.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/element_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/mesh.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/element_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/mesh.cpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/mesh.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/opengl/window.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/vertex.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/vertex_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o: ../src/graphics/window.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../dep/glad/include/KHR/khrplatform.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../dep/glad/include/glad/glad.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/element_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/opengl/element_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/opengl/vertex_array.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/vertex.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/vertex_array.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/opengl/quad_renderer.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o: ../src/graphics/quad_renderer.hpp
 
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../dep/glad/include/KHR/khrplatform.h
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../dep/glad/include/glad/glad.h
@@ -37,8 +36,23 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../src/gr
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../src/graphics/shader.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o: ../src/graphics/window.hpp
 
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../dep/glad/include/KHR/khrplatform.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../dep/glad/include/glad/glad.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/context.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/element_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/opengl/element_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/opengl/vertex_array.cpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/opengl/vertex_array.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/opengl/window.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/vertex.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/vertex_array.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o: ../src/graphics/window.hpp
+
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../dep/glad/include/KHR/khrplatform.h
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../dep/glad/include/glad/glad.h
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../src/graphics/opengl/vertex_buffer.cpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o: ../src/graphics/vertex.hpp
@@ -51,17 +65,19 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o: ../src/gr
 CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o: ../src/graphics/vertex.cpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o: ../src/graphics/vertex.hpp
 
-CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/context.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/element_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/mesh.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/element_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/mesh.hpp
-CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/shader.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/vertex_array.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/vertex.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/vertex_array.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/vertex_buffer.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/context.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/shader.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/opengl/window.hpp
+CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/quad_renderer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/shader.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/vertex.hpp
-CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/vertex_buffer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/graphics/window.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o: ../src/resources/file.hpp

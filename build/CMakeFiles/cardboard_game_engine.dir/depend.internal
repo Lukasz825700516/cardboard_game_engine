@@ -11,23 +11,22 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o
  ../dep/glad/include/KHR/khrplatform.h
  ../dep/glad/include/glad/glad.h
+ ../src/graphics/opengl/element_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
-CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o
  ../dep/glad/include/KHR/khrplatform.h
  ../dep/glad/include/glad/glad.h
- /home/lukasz/projects/cardboard_game_engine/src/graphics/context.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/mesh.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
+ ../src/graphics/element_buffer.hpp
+ ../src/graphics/opengl/element_buffer.hpp
+ ../src/graphics/opengl/vertex_array.hpp
+ ../src/graphics/opengl/vertex_buffer.hpp
+ ../src/graphics/vertex.hpp
+ ../src/graphics/vertex_array.hpp
+ ../src/graphics/vertex_buffer.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/quad_renderer.cpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/quad_renderer.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o
  ../dep/glad/include/KHR/khrplatform.h
  ../dep/glad/include/glad/glad.h
@@ -37,9 +36,24 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
+CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o
+ ../dep/glad/include/KHR/khrplatform.h
+ ../dep/glad/include/glad/glad.h
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/context.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.cpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_array.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
 CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o
  ../dep/glad/include/KHR/khrplatform.h
  ../dep/glad/include/glad/glad.h
+ ../src/graphics/opengl/vertex_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
@@ -52,17 +66,19 @@ CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o
  /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
 CMakeFiles/cardboard_game_engine.dir/src/main.cpp.o
+ ../src/graphics/element_buffer.hpp
+ ../src/graphics/opengl/element_buffer.hpp
+ ../src/graphics/opengl/vertex_array.hpp
+ ../src/graphics/opengl/vertex_buffer.hpp
+ ../src/graphics/vertex.hpp
+ ../src/graphics/vertex_array.hpp
+ ../src/graphics/vertex_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/context.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/element_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/mesh.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.hpp
+ /home/lukasz/projects/cardboard_game_engine/src/graphics/quad_renderer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/shader.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.hpp
- /home/lukasz/projects/cardboard_game_engine/src/graphics/vertex_buffer.hpp
  /home/lukasz/projects/cardboard_game_engine/src/graphics/window.hpp
  /home/lukasz/projects/cardboard_game_engine/src/main.cpp
  /home/lukasz/projects/cardboard_game_engine/src/resources/file.hpp

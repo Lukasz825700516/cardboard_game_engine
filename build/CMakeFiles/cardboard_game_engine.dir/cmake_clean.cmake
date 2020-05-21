@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o"
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o"
-  "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o"
+  "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o"
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o"
+  "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o"
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o"
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o"
   "CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o"

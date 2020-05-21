@@ -1,13 +1,12 @@
+#include <glm/fwd.hpp>
 #include <iostream>
 #include <vector>
 #include "graphics/context.hpp"
-#include "graphics/element_buffer.hpp"
-#include "graphics/mesh.hpp"
 #include "graphics/shader.hpp"
 #include "graphics/vertex.hpp"
-#include "graphics/vertex_buffer.hpp"
 #include "graphics/window.hpp"
 #include "resources/file.hpp"
+#include "graphics/quad_renderer.hpp"
 
 int main()
 {
@@ -17,24 +16,9 @@ int main()
 
 	cardboard::graphics::Shader shader_program(
 		cardboard::resources::File::load_file_content("assets/simple.vertex.glsl")->c_str(),
-		cardboard::resources::File::load_file_content("assets/simple.fragment.glsl")->c_str()
-		);
+		cardboard::resources::File::load_file_content("assets/simple.fragment.glsl")->c_str());
 
-	std::vector<cardboard::graphics::Vertex> vertexes = {
-		cardboard::graphics::Vertex(0, 0, 0, 0),
-		cardboard::graphics::Vertex(0, 1, 0, 1),
-		cardboard::graphics::Vertex(1, 0, 1, 0),
-		cardboard::graphics::Vertex(1, 1, 1, 1),
-	};
-
-	std::vector<glm::uvec3> elements = {
-		glm::uvec3(0, 1, 2),
-		glm::uvec3(3, 2, 1),
-	};
-
-	cardboard::graphics::VertexBuffer vb(vertexes);
-	cardboard::graphics::ElementBuffer eb(elements);
-	cardboard::graphics::Mesh mesh(vb, eb);
+	cardboard::graphics::QuadRenderer::initialize(1000, 1000);
 
     while (!win.should_close())
     {
@@ -42,9 +26,11 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
 		shader_program.bind();
-		mesh.bind();
 
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		cardboard::graphics::QuadRenderer::create_batch();
+		cardboard::graphics::QuadRenderer::draw(glm::vec2(0, 0), glm::vec2(1, 2));
+		cardboard::graphics::QuadRenderer::draw(glm::vec2(-1, -1), glm::vec2(3, 0.5));
+		cardboard::graphics::QuadRenderer::flush();
 
 		win.swap_buffers();
 		win.poll_events();

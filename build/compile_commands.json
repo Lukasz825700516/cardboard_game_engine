@@ -41,8 +41,13 @@
 },
 {
   "directory": "/home/lukasz/projects/cardboard_game_engine/build",
-  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp",
-  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp"
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.cpp"
+},
+{
+  "directory": "/home/lukasz/projects/cardboard_game_engine/build",
+  "command": "/usr/bin/c++   -I/home/lukasz/projects/cardboard_game_engine/dep/glad/include -I/home/lukasz/projects/cardboard_game_engine/src    -std=gnu++17 -o CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o -c /home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/quad_renderer.cpp",
+  "file": "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/quad_renderer.cpp"
 },
 {
   "directory": "/home/lukasz/projects/cardboard_game_engine/build/dep/glad",

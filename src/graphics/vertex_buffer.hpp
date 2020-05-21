@@ -11,13 +11,16 @@ namespace cardboard::graphics {
 	private:
 		VertexBufferPlatformData data;
 
-		std::optional<std::vector<Vertex>> buffer;
+		std::vector<Vertex> buffer;
 	public:
 		void bind();
-		void update();
 		void flush();
 
+		VertexBuffer();
+		VertexBuffer(VertexBuffer&& vb);
 		VertexBuffer(std::vector<Vertex> buffer);
 		~VertexBuffer();
+
+		Vertex& operator[](unsigned int index);
 	};
 }

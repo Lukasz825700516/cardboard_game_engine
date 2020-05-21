@@ -6,8 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/context.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/context.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/element_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.o"
-  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/mesh.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/quad_renderer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/shader.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.o"
+  "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_array.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/vertex_buffer.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_buffer.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/opengl/window.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/window.cpp.o"
   "/home/lukasz/projects/cardboard_game_engine/src/graphics/vertex.cpp" "/home/lukasz/projects/cardboard_game_engine/build/CMakeFiles/cardboard_game_engine.dir/src/graphics/vertex.cpp.o"

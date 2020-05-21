@@ -210,32 +210,32 @@ src/graphics/opengl/element_buffer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/element_buffer.cpp.s
 .PHONY : src/graphics/opengl/element_buffer.cpp.s
 
-src/graphics/opengl/mesh.o: src/graphics/opengl/mesh.cpp.o
+src/graphics/opengl/quad_renderer.o: src/graphics/opengl/quad_renderer.cpp.o
 
-.PHONY : src/graphics/opengl/mesh.o
+.PHONY : src/graphics/opengl/quad_renderer.o
 
 # target to build an object file
-src/graphics/opengl/mesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.o
-.PHONY : src/graphics/opengl/mesh.cpp.o
+src/graphics/opengl/quad_renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.o
+.PHONY : src/graphics/opengl/quad_renderer.cpp.o
 
-src/graphics/opengl/mesh.i: src/graphics/opengl/mesh.cpp.i
+src/graphics/opengl/quad_renderer.i: src/graphics/opengl/quad_renderer.cpp.i
 
-.PHONY : src/graphics/opengl/mesh.i
+.PHONY : src/graphics/opengl/quad_renderer.i
 
 # target to preprocess a source file
-src/graphics/opengl/mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.i
-.PHONY : src/graphics/opengl/mesh.cpp.i
+src/graphics/opengl/quad_renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.i
+.PHONY : src/graphics/opengl/quad_renderer.cpp.i
 
-src/graphics/opengl/mesh.s: src/graphics/opengl/mesh.cpp.s
+src/graphics/opengl/quad_renderer.s: src/graphics/opengl/quad_renderer.cpp.s
 
-.PHONY : src/graphics/opengl/mesh.s
+.PHONY : src/graphics/opengl/quad_renderer.s
 
 # target to generate assembly for a file
-src/graphics/opengl/mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/mesh.cpp.s
-.PHONY : src/graphics/opengl/mesh.cpp.s
+src/graphics/opengl/quad_renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/quad_renderer.cpp.s
+.PHONY : src/graphics/opengl/quad_renderer.cpp.s
 
 src/graphics/opengl/shader.o: src/graphics/opengl/shader.cpp.o
 
@@ -263,6 +263,33 @@ src/graphics/opengl/shader.s: src/graphics/opengl/shader.cpp.s
 src/graphics/opengl/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/shader.cpp.s
 .PHONY : src/graphics/opengl/shader.cpp.s
+
+src/graphics/opengl/vertex_array.o: src/graphics/opengl/vertex_array.cpp.o
+
+.PHONY : src/graphics/opengl/vertex_array.o
+
+# target to build an object file
+src/graphics/opengl/vertex_array.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.o
+.PHONY : src/graphics/opengl/vertex_array.cpp.o
+
+src/graphics/opengl/vertex_array.i: src/graphics/opengl/vertex_array.cpp.i
+
+.PHONY : src/graphics/opengl/vertex_array.i
+
+# target to preprocess a source file
+src/graphics/opengl/vertex_array.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.i
+.PHONY : src/graphics/opengl/vertex_array.cpp.i
+
+src/graphics/opengl/vertex_array.s: src/graphics/opengl/vertex_array.cpp.s
+
+.PHONY : src/graphics/opengl/vertex_array.s
+
+# target to generate assembly for a file
+src/graphics/opengl/vertex_array.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cardboard_game_engine.dir/build.make CMakeFiles/cardboard_game_engine.dir/src/graphics/opengl/vertex_array.cpp.s
+.PHONY : src/graphics/opengl/vertex_array.cpp.s
 
 src/graphics/opengl/vertex_buffer.o: src/graphics/opengl/vertex_buffer.cpp.o
 
@@ -415,12 +442,15 @@ help:
 	@echo "... src/graphics/opengl/element_buffer.o"
 	@echo "... src/graphics/opengl/element_buffer.i"
 	@echo "... src/graphics/opengl/element_buffer.s"
-	@echo "... src/graphics/opengl/mesh.o"
-	@echo "... src/graphics/opengl/mesh.i"
-	@echo "... src/graphics/opengl/mesh.s"
+	@echo "... src/graphics/opengl/quad_renderer.o"
+	@echo "... src/graphics/opengl/quad_renderer.i"
+	@echo "... src/graphics/opengl/quad_renderer.s"
 	@echo "... src/graphics/opengl/shader.o"
 	@echo "... src/graphics/opengl/shader.i"
 	@echo "... src/graphics/opengl/shader.s"
+	@echo "... src/graphics/opengl/vertex_array.o"
+	@echo "... src/graphics/opengl/vertex_array.i"
+	@echo "... src/graphics/opengl/vertex_array.s"
 	@echo "... src/graphics/opengl/vertex_buffer.o"
 	@echo "... src/graphics/opengl/vertex_buffer.i"
 	@echo "... src/graphics/opengl/vertex_buffer.s"
