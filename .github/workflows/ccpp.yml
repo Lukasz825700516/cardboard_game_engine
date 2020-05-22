@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: openrndr/setup-opengl@v1
-    - run: xvfb-run glxinfo
+    - run: |
+        sudo apt-get install libgl1-mesa-dev glm
+        xvfb-run glxinfo
     - name: cmake
       run: cmake . -DCARDBOARD_GRAPHICS_TARGET:STRING=opengl
     - name: make
