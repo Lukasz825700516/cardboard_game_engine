@@ -4,14 +4,13 @@
 namespace cardboard::graphics {
 	class Context {
 		private: 
-		static Window window;
+		Window window;
 
 		public:
+		Context();
+		~Context();
 
-		static void initialize();
-		static void destroy();
-
-		static void set_window(Window& window);
-
+		void set_window(Window&& window);
+		inline Window& get_window() { return this->window; }
 	};
 }
