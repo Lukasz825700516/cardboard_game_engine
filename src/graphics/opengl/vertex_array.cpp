@@ -33,10 +33,9 @@ namespace cardboard::graphics {
 	}
 
 	VertexArray::VertexArray(VertexArray&& va):
+   		data(std::move(va.data)),
 		vb(std::move(va.vb)), 
-		eb(std::move(va.eb)),
-   		data(std::move(va.data)) {
-	}
+		eb(std::move(va.eb)) {}
 
 	VertexArray::VertexArray(VertexBuffer&& vb, ElementBuffer&& eb):
    		vb(std::move(vb)), eb(std::move(eb)) {

@@ -22,8 +22,8 @@ namespace cardboard::graphics {
 
 	ElementBuffer::ElementBuffer() {}
 	ElementBuffer::ElementBuffer(ElementBuffer&& eb):
-   		buffer(std::move(eb.buffer)),
-		data(std::move(eb.data)) {}
+		data(std::move(eb.data)),
+   		buffer(std::move(eb.buffer)) {}
 
 	ElementBuffer::ElementBuffer(std::vector<glm::uvec3> buffer):
 		buffer(buffer) {}

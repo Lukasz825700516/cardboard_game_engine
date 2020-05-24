@@ -19,8 +19,8 @@ namespace cardboard::graphics {
 
 	VertexBuffer::VertexBuffer() {}
 	VertexBuffer::VertexBuffer(VertexBuffer&& vb):
-   		buffer(std::move(vb.buffer)),
-		data(std::move(vb.data)) {}
+		data(std::move(vb.data)),
+   		buffer(std::move(vb.buffer)) {}
 	VertexBuffer::VertexBuffer(std::vector<Vertex> buffer):
 		buffer(buffer) {}
 	VertexBuffer::~VertexBuffer() {}

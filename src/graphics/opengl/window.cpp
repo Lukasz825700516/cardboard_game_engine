@@ -31,17 +31,17 @@ namespace cardboard::graphics {
 		width(std::move(w.width)),
 		height(std::move(w.height)) {}
 	Window::Window(const char* name, unsigned int width, unsigned int height):
+   		data(name, width, height),
    		width(width),
-		height(height),
-   		data(name, width, height) {}
+		height(height) {}
 	Window::~Window() {}
 
 	void Window::set_name(const char* name) {
-	
+		glfwSetWindowTitle(this->data.window, name);
 	}
 
 	void Window::set_size(unsigned int width, unsigned int height) {
-	
+		glfwSetWindowSize(this->data.window, width, height);
 	}
 
 	int Window::should_close() {
@@ -57,6 +57,9 @@ namespace cardboard::graphics {
 
 	Window& Window::operator=(Window&& w) {
 		this->data = std::move(w.data);
+		this->width = w.width;
+		this->height = w.height;
+
 		return *this;
 	}
 }
