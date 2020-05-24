@@ -28,7 +28,16 @@ namespace cardboard::graphics {
 		QuadRenderer::vertex_array->get_element_buffer().resize(QuadRenderer::max_elements);
 	}
 
-	void QuadRenderer::create_batch() {
+	void QuadRenderer::create_scene(Camera& camera, Shader& shader) {
+		QuadRenderer::drawn_elements = 0;
+		QuadRenderer::drawn_vertexes = 0;
+
+		shader.bind();
+		shader.set_uniform(camera.get_transformation(), "camera_transform");
+		shader.set_uniform(camera.get_position(), "camera_position");
+	}
+
+	void QuadRenderer::reset_scene() {
 		QuadRenderer::drawn_elements = 0;
 		QuadRenderer::drawn_vertexes = 0;
 	}
@@ -46,9 +55,9 @@ namespace cardboard::graphics {
 
 		if (out_of_memory) {
 			QuadRenderer::flush();
-			QuadRenderer::create_batch();
-
+			QuadRenderer::reset_scene();
 		} 
+
 		vb[QuadRenderer::drawn_vertexes + 0] =
 			Vertex(position, glm::vec2(0, 0));
 

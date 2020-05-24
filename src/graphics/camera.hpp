@@ -24,6 +24,9 @@ namespace cardboard::graphics {
 		void set_dimensions(glm::vec2 dimensions);
 		void set_position(glm::vec2 position);
 
+		inline glm::mat4& get_transformation() { return this->transfomation; }
+		inline glm::vec2& get_position() { return this->position; }
+
 		glm::mat4& calculate();
 	};
 }

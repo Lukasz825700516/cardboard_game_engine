@@ -38,6 +38,7 @@ set(SOURCES
 	${PROJECT_SOURCE_DIR}/src/main.cpp
 	${PROJECT_SOURCE_DIR}/src/resources/file.cpp
 	${PROJECT_SOURCE_DIR}/src/graphics/vertex.cpp
+	${PROJECT_SOURCE_DIR}/src/graphics/camera.cpp
 	${CARDBOARD_GRAPHICS_SOURCES}
 )
 

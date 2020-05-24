@@ -13,13 +13,15 @@ namespace cardboard::graphics {
 	Camera::Camera(glm::vec2 dimensions):
 		dimensions(dimensions) {
 	
-		this->transfomation = glm::scale(glm::vec3(dimensions.x, dimensions.y, 1));
+		this->calculate();
 	}
 
 	Camera::Camera(Camera&& camera):
    		transfomation(std::move(camera.transfomation)),
 		dimensions(std::move(camera.dimensions)),
 		position(std::move(camera.position)) {}
+
+	Camera::~Camera() {}
 
 	Camera& Camera::operator=(Camera& camera) {
 		this->transfomation = camera.transfomation;
@@ -52,7 +54,7 @@ namespace cardboard::graphics {
 	}
 
 	glm::mat4& Camera::calculate() {
-		this->transfomation = glm::scale(glm::vec3(
+		this->transfomation = glm::scale(1.0f / glm::vec3(
 			this->dimensions.x,
 			this->dimensions.y,
 			1));
