@@ -1,7 +1,5 @@
 #include <glm/fwd.hpp>
 
-#include <iostream>
-#include <vector>
 #include "graphics/camera.hpp"
 #include "graphics/context.hpp"
 #include "graphics/shader.hpp"
@@ -34,10 +32,11 @@ int main() {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+		camera.set_position(glm::vec2(std::cos(time / 10) * 300, std::sin(time / 10) * 300));
 		QuadRenderer::create_scene(camera, shader_program);
-		for (float x = 0; x < 800; x += 100) {
-			for (float y = 0; y < 600; y += 100) {
-				QuadRenderer::draw(glm::vec2(x + std::cos(time / 10) * 300, y), glm::vec2(80));
+		for (float x = -800; x < 800; x += 100) {
+			for (float y = -600; y < 600; y += 100) {
+				QuadRenderer::draw(glm::vec2(x, y), glm::vec2(80));
 			}
 		}
 		QuadRenderer::flush();

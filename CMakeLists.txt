@@ -47,6 +47,11 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 add_executable(cardboard_game_engine ${SOURCES})
 	
 target_compile_features(cardboard_game_engine PRIVATE cxx_std_17)
+if(MSVC)
+  target_compile_options(cardboard_game_engine PRIVATE /W4 /WX)
+else()
+  target_compile_options(cardboard_game_engine PRIVATE -Wall -Wextra -pedantic -Werror)
+endif()
 
 target_link_libraries(cardboard_game_engine 
 	${CARDBOARD_GRAPHICS_LIBRARIES}

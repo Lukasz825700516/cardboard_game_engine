@@ -19,8 +19,6 @@ namespace cardboard::graphics {
 		Camera& operator=(Camera& camera);
 		Camera& operator=(Camera&& camera);
 
-		static Camera get_2d(glm::vec2 dimensions);
-
 		void set_dimensions(glm::vec2 dimensions);
 		void set_position(glm::vec2 position);
 

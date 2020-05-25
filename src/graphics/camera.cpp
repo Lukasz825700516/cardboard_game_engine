@@ -1,6 +1,7 @@
 #include "camera.hpp"
 
-#include <glm/gtx/transform.hpp>
+
+#include <glm/gtc/matrix_transform.hpp>
 
 namespace cardboard::graphics {
 	Camera::Camera() {}
@@ -39,12 +40,6 @@ namespace cardboard::graphics {
 		return *this;
 	}
 
-	Camera Camera::get_2d(glm::vec2 dimensions) {
-		Camera camera;
-
-		return std::move(camera);
-	}
-
 	void Camera::set_dimensions(glm::vec2 dimensions) {
 		this->dimensions = dimensions;
 	}
@@ -54,10 +49,12 @@ namespace cardboard::graphics {
 	}
 
 	glm::mat4& Camera::calculate() {
-		this->transfomation = glm::scale(1.0f / glm::vec3(
-			this->dimensions.x,
-			this->dimensions.y,
-			1));
+		this->transfomation = glm::scale(
+			glm::mat4(1.0f),
+			1.0f / glm::vec3(
+				this->dimensions.x,
+				this->dimensions.y,
+				1));
 
 		return this->transfomation;
 	}
