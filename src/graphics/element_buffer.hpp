@@ -2,8 +2,6 @@
 
 #include "opengl/element_buffer.hpp"
 
-#include <glm/fwd.hpp>
-#include <optional>
 #include <vector>
 #include <glm/glm.hpp>
 

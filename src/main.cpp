@@ -23,7 +23,7 @@ int main() {
 		File::read("assets/simple.vertex.glsl")->c_str(),
 		File::read("assets/simple.fragment.glsl")->c_str());
 
-	QuadRenderer::initialize(1000, 1000);
+	QuadRenderer renderer(1000, 1000);
 	Camera camera(glm::vec2(800, 600));
 	
 	float time = 0;
@@ -33,13 +33,13 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
 
 		camera.set_position(glm::vec2(std::cos(time / 10) * 300, std::sin(time / 10) * 300));
-		QuadRenderer::create_scene(camera, shader_program);
+		renderer.create_scene(camera, shader_program);
 		for (float x = -800; x < 800; x += 100) {
 			for (float y = -600; y < 600; y += 100) {
-				QuadRenderer::draw(glm::vec2(x, y), glm::vec2(80));
+				renderer.draw(glm::vec2(x, y), glm::vec2(80));
 			}
 		}
-		QuadRenderer::flush();
+		renderer.flush();
 
 		ctx.get_window().swap_buffers();
 		ctx.get_window().poll_events();
