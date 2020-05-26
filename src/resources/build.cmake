@@ -1,3 +1,0 @@
-set(CARDBOARD_RESOURCES_SOURCES
-	${PROJECT_SOURCE_DIR}/src/resources/file.cpp	
-)

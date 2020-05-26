@@ -5,6 +5,8 @@
 #include "graphics/shader.hpp"
 #include "graphics/window.hpp"
 #include "resources/file.hpp"
+#include "resources/key.hpp"
+#include "resources/keyboard.hpp"
 #include "graphics/quad_renderer.hpp"
 #include <cmath>
 
@@ -14,6 +16,7 @@ using cardboard::graphics::Shader;
 using cardboard::graphics::QuadRenderer;
 using cardboard::resources::File;
 using cardboard::graphics::Camera;
+using cardboard::resources::Keyboard;
 
 int main() {
 	Context ctx;
@@ -25,14 +28,22 @@ int main() {
 
 	QuadRenderer renderer(1000, 1000);
 	Camera camera(glm::vec2(800, 600));
+	Keyboard keyboard(ctx.get_window());
 	
 	float time = 0;
+	float x = 0;
+	float y = 0;
 
     while (!ctx.get_window().should_close()) {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-		camera.set_position(glm::vec2(std::cos(time / 10) * 300, std::sin(time / 10) * 300));
+		if (keyboard.is_key_pressed(cardboard::resources::CARDBOARD_KEYBOARD_KEY_LEFT)) x -= 10;
+		if (keyboard.is_key_pressed(cardboard::resources::CARDBOARD_KEYBOARD_KEY_RIGHT)) x += 10;
+		if (keyboard.is_key_pressed(cardboard::resources::CARDBOARD_KEYBOARD_KEY_UP)) y += 10;
+		if (keyboard.is_key_pressed(cardboard::resources::CARDBOARD_KEYBOARD_KEY_DOWN)) y -= 10;
+
+		camera.set_position(glm::vec2(x, y));
 		renderer.create_scene(camera, shader_program);
 		for (float x = -800; x < 800; x += 100) {
 			for (float y = -600; y < 600; y += 100) {
