@@ -59,13 +59,13 @@ namespace cardboard::graphics {
 			Vertex(position, glm::vec2(0, 0));
 
 		vb[this->drawn_vertexes + 1] =
-			Vertex(position + glm::vec2(size.x, 0), glm::vec2(size.x, 0));
+			Vertex(position + glm::vec2(size.x, 0), glm::vec2(1, 0));
 
 		vb[this->drawn_vertexes + 2] =
-			Vertex(position + glm::vec2(0, size.y), glm::vec2(0, size.y));
+			Vertex(position + glm::vec2(0, size.y), glm::vec2(0, 1));
 
 		vb[this->drawn_vertexes + 3] =
-			Vertex(position + size, size);
+			Vertex(position + size, glm::vec2(1));
 
 		eb[this->drawn_elements + 0] = glm::uvec3(
 			this->drawn_vertexes + 0,

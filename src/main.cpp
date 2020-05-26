@@ -7,12 +7,19 @@
 #include "resources/keyboard.hpp"
 #include "resources/mouse.hpp"
 #include "graphics/quad_renderer.hpp"
+#include "graphics/texture.hpp"
 #include <cmath>
+#include <vector>
+
+extern "C" {
+#include <stb_image.h>
+}
 
 using cardboard::graphics::Context;
 using cardboard::resources::Window;
 using cardboard::graphics::Shader;
 using cardboard::graphics::QuadRenderer;
+using cardboard::graphics::Texture;
 using cardboard::resources::File;
 using cardboard::graphics::Camera;
 using cardboard::resources::Keyboard;
@@ -37,6 +44,14 @@ int main() {
 	glm::vec2 position = glm::vec2(0.0);
 	glm::vec2 last_mouse_position = glm::vec2(0.0);
 
+	const char* filename = "assets/sample.png";
+	glm::ivec2 size;
+	int channels;
+
+	unsigned char* image_data = stbi_load(filename, &size.x, &size.y, &channels, 4);
+	Texture texture(size, std::vector<unsigned char>(image_data, image_data + size.x * size.y * 4));
+	delete image_data;
+
     while (!ctx.get_window().should_close()) {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
@@ -59,6 +74,7 @@ int main() {
 		last_mouse_position = mouse_position;
 
 
+		texture.bind(0);
 		camera.set_position(position);
 		renderer.create_scene(camera, shader_program);
 		for (float x = -800; x < 800; x += 100) {

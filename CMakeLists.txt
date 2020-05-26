@@ -6,6 +6,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 set(CARDBOARD_GRAPHICS_TARGET "none" CACHE STRING "Gameengine rendering target")
 set(CARDBOARD_RESOURCES_WINDOWS_TARGET "none" CACHE STRING "Gameengine resource window target")
 
+add_subdirectory(${PROJECT_SOURCE_DIR}/dep/stbi)
+include_directories(${PROJECT_SOURCE_DIR}/dep/stbi)
+
 if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 	find_package(OpenGL REQUIRED)
 	add_subdirectory(${PROJECT_SOURCE_DIR}/dep/glad)
@@ -23,6 +26,7 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/element_buffer.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_array.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/quad_renderer.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/texture.cpp
 	)
 else()
 	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
@@ -69,5 +73,6 @@ endif()
 target_link_libraries(cardboard_game_engine 
 	${CARDBOARD_RESOURCES_WINDOWS_LIBRARIES}
 	${CARDBOARD_GRAPHICS_LIBRARIES}
+	stbi
 )
 
