@@ -18,6 +18,6 @@ jobs:
         sudo apt-get install libgl1-mesa-dev libglm-dev libglfw3-dev
         xvfb-run glxinfo
     - name: cmake
-      run: cmake . -DCARDBOARD_GRAPHICS_TARGET:STRING=opengl
+      run: cmake . -DCARDBOARD_GRAPHICS_TARGET=opengl -DCARDBOARD_RESOURCES_WINDOWS_TARGET=glfw
     - name: make
       run: make
