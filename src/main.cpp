@@ -3,7 +3,6 @@
 #include "graphics/camera.hpp"
 #include "graphics/context.hpp"
 #include "graphics/shader.hpp"
-#include "graphics/window.hpp"
 #include "resources/file.hpp"
 #include "resources/keyboard.hpp"
 #include "resources/mouse.hpp"
@@ -11,7 +10,7 @@
 #include <cmath>
 
 using cardboard::graphics::Context;
-using cardboard::graphics::Window;
+using cardboard::resources::Window;
 using cardboard::graphics::Shader;
 using cardboard::graphics::QuadRenderer;
 using cardboard::resources::File;

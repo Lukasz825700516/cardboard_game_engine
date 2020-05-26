@@ -1,5 +1,7 @@
 #pragma once
-#include "window.hpp"
+#include "resources/window.hpp"
+
+using cardboard::resources::Window;
 
 namespace cardboard::graphics {
 	class Context {

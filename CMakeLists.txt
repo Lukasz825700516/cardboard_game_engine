@@ -4,18 +4,15 @@ project(cardboard_game_engine)
 set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 
 set(CARDBOARD_GRAPHICS_TARGET "none" CACHE STRING "Gameengine rendering target")
-set(CARDBOARD_GRAPHICS_LIBRARIES)
-set(CARDBOARD_GRAPHICS_SOURCES)
+set(CARDBOARD_RESOURCES_WINDOWS_TARGET "none" CACHE STRING "Gameengine resource window target")
 
 if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 	find_package(OpenGL REQUIRED)
-	find_package(glfw3 REQUIRED)
 	add_subdirectory(${PROJECT_SOURCE_DIR}/dep/glad)
 	include_directories(${PROJECT_SOURCE_DIR}/dep/glad/include)
 
 	set(CARDBOARD_GRAPHICS_LIBRARIES
 		OpenGL::GL
-		glfw
 		glad
 	)
 
@@ -24,14 +21,27 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/shader.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_buffer.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/element_buffer.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/opengl/window.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_array.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/quad_renderer.cpp
+	)
+else()
+	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
+endif()
+
+if(CARDBOARD_RESOURCES_WINDOWS_TARGET STREQUAL "glfw")
+	find_package(glfw3 REQUIRED)
+
+	set(CARDBOARD_RESOURCES_WINDOWS_LIBRARIES
+		glfw
+	)
+
+	set(CARDBOARD_RESOURCES_WINDOWS_SOURCES
+		${PROJECT_SOURCE_DIR}/src/resources/glfw/window.cpp
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/keyboard.cpp
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/mouse.cpp
 	)
 else()
-	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
+	message(FATAL_ERROR "There was no windows target specified! ${CARDBOARD_RESOURCES_WINDOWS_TARGET}")
 endif()
 
 file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${PROJECT_BINARY_DIR})
@@ -41,6 +51,7 @@ set(SOURCES
 	${PROJECT_SOURCE_DIR}/src/resources/file.cpp
 	${PROJECT_SOURCE_DIR}/src/graphics/vertex.cpp
 	${PROJECT_SOURCE_DIR}/src/graphics/camera.cpp
+	${CARDBOARD_RESOURCES_WINDOWS_SOURCES}
 	${CARDBOARD_GRAPHICS_SOURCES}
 )
 
@@ -56,6 +67,7 @@ else()
 endif()
 
 target_link_libraries(cardboard_game_engine 
+	${CARDBOARD_RESOURCES_WINDOWS_LIBRARIES}
 	${CARDBOARD_GRAPHICS_LIBRARIES}
 )
 

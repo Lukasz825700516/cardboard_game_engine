@@ -3,8 +3,8 @@
 #include <iostream>
 #include <utility>
 #include "../window.hpp"
-#include "graphics/opengl/window.hpp"
-namespace cardboard::graphics {
+#include "window.hpp"
+namespace cardboard::resources {
 	WindowPlatformData::WindowPlatformData() {}
 	WindowPlatformData::WindowPlatformData(const char* name, unsigned int width,unsigned int height) {
 		this->window = glfwCreateWindow(width, height, name, 0, 0);

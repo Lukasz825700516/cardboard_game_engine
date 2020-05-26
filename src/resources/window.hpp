@@ -1,8 +1,8 @@
 #pragma once
 
-#include "opengl/window.hpp"
+#include "glfw/window.hpp"
 
-namespace cardboard::graphics {
+namespace cardboard::resources {
 	class Window {
 		private:
 		WindowPlatformData data;

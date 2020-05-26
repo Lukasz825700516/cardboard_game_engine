@@ -1,11 +1,9 @@
 #pragma once
 
-#include "../graphics/window.hpp"
+#include "window.hpp"
 #include "glfw/mouse.hpp"
 #include "mouse_key.hpp"
 #include "mouse_mode.hpp"
-
-using cardboard::graphics::Window;
 
 namespace cardboard::resources {
 	class Mouse {

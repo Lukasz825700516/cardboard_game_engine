@@ -1,9 +1,7 @@
 #pragma once
-#include "../graphics/window.hpp"
+#include "window.hpp"
 #include "glfw/keyboard.hpp"
 #include "keyboard_key.hpp"
-
-using cardboard::graphics::Window;
 
 namespace cardboard::resources {
 	class Keyboard {

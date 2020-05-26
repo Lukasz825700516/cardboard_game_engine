@@ -1,7 +1,7 @@
 #pragma once
 #include <GLFW/glfw3.h>
 
-namespace cardboard::graphics {
+namespace cardboard::resources {
 	class WindowPlatformData {
 		public:
 			GLFWwindow *window;
