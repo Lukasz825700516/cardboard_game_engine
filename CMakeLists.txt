@@ -28,6 +28,7 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_array.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/quad_renderer.cpp
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/keyboard.cpp
+		${PROJECT_SOURCE_DIR}/src/resources/glfw/mouse.cpp
 	)
 else()
 	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
