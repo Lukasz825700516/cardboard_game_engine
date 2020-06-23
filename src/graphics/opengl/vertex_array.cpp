@@ -30,6 +30,11 @@ namespace cardboard::graphics {
 			sizeof(Vertex),
 			(void *)offsetof(Vertex, uv));
 		glad_glEnableVertexAttribArray(1);
+
+		glad_glVertexAttribIPointer(2, 1, GL_INT,
+			sizeof(Vertex),
+			(void *)offsetof(Vertex, texture_id));
+		glad_glEnableVertexAttribArray(2);
 	}
 
 	VertexArray::VertexArray(VertexArray&& va):
@@ -52,6 +57,11 @@ namespace cardboard::graphics {
 			sizeof(Vertex),
 			(void *)offsetof(Vertex, uv));
 		glad_glEnableVertexAttribArray(1);
+
+		glad_glVertexAttribPointer(2, 1, GL_INT, GL_FALSE,
+			sizeof(Vertex),
+			(void *)offsetof(Vertex, texture_id));
+		glad_glEnableVertexAttribArray(2);
 	}
 
 	VertexArray::~VertexArray() {}

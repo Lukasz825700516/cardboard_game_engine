@@ -28,5 +28,7 @@ namespace cardboard::graphics {
 		void set_uniform(glm::ivec3 value, const char* name);
 		void set_uniform(glm::ivec2 value, const char* name);
 		void set_uniform(int value, const char* name);
+
+		void set_uniform(const char* name, size_t size, int* value);
 	};
 }

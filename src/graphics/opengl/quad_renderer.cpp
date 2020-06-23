@@ -4,6 +4,7 @@
 #include "graphics/vertex.hpp"
 #include "graphics/vertex_array.hpp"
 #include "graphics/vertex_buffer.hpp"
+#include <iostream>
 
 namespace cardboard::graphics {
 	QuadRenderer::QuadRenderer(unsigned int max_vertexes, unsigned int max_elements):
@@ -29,6 +30,7 @@ namespace cardboard::graphics {
 		this->drawn_elements = 0;
 		this->drawn_vertexes = 0;
 
+		this->last_shader = &shader;
 		shader.bind();
 		shader.set_uniform(camera.get_transformation(), "camera_transform");
 		shader.set_uniform(camera.get_position(), "camera_position");
@@ -46,7 +48,7 @@ namespace cardboard::graphics {
 		auto& vb = this->vertex_array.get_vertex_buffer();
 		auto& eb = this->vertex_array.get_element_buffer();
 
-		unsigned int out_of_memory = 0;
+		bool out_of_memory = 0;
 		out_of_memory |= !(this->drawn_vertexes + vertexes_to_add < this->max_vertexes);
 		out_of_memory |= !(this->drawn_elements + elements_to_add < this->max_elements);
 
@@ -54,6 +56,7 @@ namespace cardboard::graphics {
 			this->flush();
 			this->reset_scene();
 		} 
+
 
 		vb[this->drawn_vertexes + 0] =
 			Vertex(position, glm::vec2(0, 0));
@@ -81,11 +84,55 @@ namespace cardboard::graphics {
 		this->drawn_elements += elements_to_add;
 	}
 
+	void QuadRenderer::draw(glm::vec2 position, glm::vec2 size, Texture& texture) {
+		unsigned int vertexes_to_add = 4;
+		unsigned int elements_to_add = 2;
+
+		auto& vb = this->vertex_array.get_vertex_buffer();
+		auto& eb = this->vertex_array.get_element_buffer();
+
+		bool out_of_memory = 0;
+		out_of_memory |= !(this->drawn_vertexes + vertexes_to_add < this->max_vertexes);
+		out_of_memory |= !(this->drawn_elements + elements_to_add < this->max_elements);
+		out_of_memory |= !this->texture_batch.push(texture);
+
+		if (out_of_memory) {
+			this->flush();
+			this->reset_scene();
+		} 
+
+		int texture_id = this->texture_batch.get(texture);
+
+		vb[this->drawn_vertexes + 0] =
+			Vertex(position, glm::vec2(0, 0), texture_id);
+
+		vb[this->drawn_vertexes + 1] =
+			Vertex(position + glm::vec2(size.x, 0), glm::vec2(1, 0), texture_id);
+
+		vb[this->drawn_vertexes + 2] =
+			Vertex(position + glm::vec2(0, size.y), glm::vec2(0, 1), texture_id);
+
+		vb[this->drawn_vertexes + 3] =
+			Vertex(position + size, glm::vec2(1), texture_id);
+
+		eb[this->drawn_elements + 0] = glm::uvec3(
+			this->drawn_vertexes + 0,
+			this->drawn_vertexes + 1,
+			this->drawn_vertexes + 2);
+
+		eb[this->drawn_elements + 1] = glm::uvec3(
+			this->drawn_vertexes + 3,
+			this->drawn_vertexes + 2,
+			this->drawn_vertexes + 1);
+
+		this->drawn_vertexes += vertexes_to_add;
+		this->drawn_elements += elements_to_add;
+	}
+
 	void QuadRenderer::flush() {
-		this->vertex_array.bind();
 		this->vertex_array.flush();
+		this->texture_batch.flush(*this->last_shader);
 		
 		glad_glDrawElements(GL_TRIANGLES, this->drawn_elements * 3, GL_UNSIGNED_INT, 0);
-	
 	}
 }

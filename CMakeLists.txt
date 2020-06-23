@@ -9,10 +9,13 @@ set(CARDBOARD_RESOURCES_WINDOWS_TARGET "none" CACHE STRING "Gameengine resource 
 add_subdirectory(${PROJECT_SOURCE_DIR}/dep/stbi)
 include_directories(${PROJECT_SOURCE_DIR}/dep/stbi)
 
+include_directories(${PROJECT_SOURCE_DIR}/dep/glm)
+
 if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 	find_package(OpenGL REQUIRED)
 	add_subdirectory(${PROJECT_SOURCE_DIR}/dep/glad)
 	include_directories(${PROJECT_SOURCE_DIR}/dep/glad/include)
+
 
 	set(CARDBOARD_GRAPHICS_LIBRARIES
 		OpenGL::GL
@@ -27,13 +30,17 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/vertex_array.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/quad_renderer.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/texture.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/opengl/texture_batch.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/texture_data.cpp
+		${PROJECT_SOURCE_DIR}/src/graphics/particle_system.cpp
 	)
 else()
 	message(FATAL_ERROR "There was no graphics target specified! ${CARDBOARD_GRAPHICS_TARGET}")
 endif()
 
 if(CARDBOARD_RESOURCES_WINDOWS_TARGET STREQUAL "glfw")
-	find_package(glfw3 REQUIRED)
+	add_subdirectory(${PROJECT_SOURCE_DIR}/dep/glfw)
+	include_directories(${PROJECT_SOURCE_DIR}/dep/glfw/include)
 
 	set(CARDBOARD_RESOURCES_WINDOWS_LIBRARIES
 		glfw
@@ -43,6 +50,7 @@ if(CARDBOARD_RESOURCES_WINDOWS_TARGET STREQUAL "glfw")
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/window.cpp
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/keyboard.cpp
 		${PROJECT_SOURCE_DIR}/src/resources/glfw/mouse.cpp
+		${PROJECT_SOURCE_DIR}/src/resources/texture_loader.cpp
 	)
 else()
 	message(FATAL_ERROR "There was no windows target specified! ${CARDBOARD_RESOURCES_WINDOWS_TARGET}")
