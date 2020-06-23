@@ -12,7 +12,7 @@ namespace cardboard::graphics {
 		position(camera.position) {}
 
 	Camera::Camera(glm::vec2 dimensions):
-		dimensions(dimensions) {
+		dimensions(dimensions / 2.0f) {
 	
 		this->calculate();
 	}

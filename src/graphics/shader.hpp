@@ -17,6 +17,8 @@ namespace cardboard::graphics {
 		
 		void bind();
 
+		unsigned int get_uniform_id(const char* name);
+
 		void set_uniform(glm::mat4& value, const char* name);
 		void set_uniform(glm::mat3& value, const char* name);
 		void set_uniform(glm::mat2& value, const char* name);

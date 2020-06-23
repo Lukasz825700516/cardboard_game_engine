@@ -64,7 +64,7 @@ namespace cardboard::graphics {
 		glad_glUseProgram(this->data.shader_program);
 	}
 
-	void Shader::set_uniform(glm::mat4& value, const char* name) {
+	unsigned int Shader::get_uniform_id(const char* name) {
 		unsigned int uniform = 0;
 		auto search = this->data.uniforms.find(name);
 		
@@ -77,70 +77,31 @@ namespace cardboard::graphics {
 				uniform;
 		}
 
+		return uniform;
+	}
+
+	void Shader::set_uniform(glm::mat4& value, const char* name) {
+		unsigned int uniform = this->get_uniform_id(name);
 		glad_glUniformMatrix4fv(uniform, 1, false, glm::value_ptr(value));
 	}
 
 	void Shader::set_uniform(glm::vec2 value, const char* name) {
-		unsigned int uniform = 0;
-		auto search = this->data.uniforms.find(name);
-		
-		if (search != this->data.uniforms.end()) {
-			uniform = search->second;
-		} else {
-			uniform = 
-				glad_glGetUniformLocation(this->data.shader_program, name);
-			this->data.uniforms[name] =
-				uniform;
-		}
-
+		unsigned int uniform = this->get_uniform_id(name);
 		glad_glUniform2f(uniform, value.x, value.y);
 	}
 
 	void Shader::set_uniform(glm::vec3 value, const char* name) {
-		unsigned int uniform = 0;
-		auto search = this->data.uniforms.find(name);
-		
-		if (search != this->data.uniforms.end()) {
-			uniform = search->second;
-		} else {
-			uniform = 
-				glad_glGetUniformLocation(this->data.shader_program, name);
-			this->data.uniforms[name] =
-				uniform;
-		}
-
+		unsigned int uniform = this->get_uniform_id(name);
 		glad_glUniform3f(uniform, value.x, value.y, value.z);
 	}
 
 	void Shader::set_uniform(int value, const char* name) {
-		unsigned int uniform = 0;
-		auto search = this->data.uniforms.find(name);
-		
-		if (search != this->data.uniforms.end()) {
-			uniform = search->second;
-		} else {
-			uniform = 
-				glad_glGetUniformLocation(this->data.shader_program, name);
-			this->data.uniforms[name] =
-				uniform;
-		}
-
+		unsigned int uniform = this->get_uniform_id(name);
 		glad_glUniform1i(uniform, value);
 	}
 
 	void Shader::set_uniform(const char* name, size_t size, int* value) {
-		unsigned int uniform = 0;
-		auto search = this->data.uniforms.find(name);
-		
-		if (search != this->data.uniforms.end()) {
-			uniform = search->second;
-		} else {
-			uniform = 
-				glad_glGetUniformLocation(this->data.shader_program, name);
-			this->data.uniforms[name] =
-				uniform;
-		}
-
+		unsigned int uniform = this->get_uniform_id(name);
 		glad_glUniform1iv(uniform, size, value);
 	}
 }

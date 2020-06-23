@@ -1,2 +1,4 @@
 .clangd
 build
+tags
+compilecommands.json

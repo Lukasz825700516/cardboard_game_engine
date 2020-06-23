@@ -46,7 +46,7 @@ int main() {
 	Mouse mouse(ctx.get_window());
 
 	float time = 0;
-	glm::vec2 position = glm::vec2(0.0);
+	glm::vec2 position = glm::vec2(400, 300);
 	glm::vec2 last_mouse_position = glm::vec2(0.0);
 
 	Texture texture_0(TextureLoader::load_texture("assets/sample.png").value());
@@ -70,7 +70,7 @@ int main() {
 		// Mouse camera movement
 		glm::vec2 mouse_position = mouse.get_position();
 		if (mouse.is_button_pressed(MouseKey::CARDBOARD_MOUSE_LEFT)) {
-			position += (mouse_position - last_mouse_position) * 2.0f;
+			position += mouse_position - last_mouse_position;
 		}
 		last_mouse_position = mouse_position;
 
@@ -79,9 +79,9 @@ int main() {
 		// Render something
 		camera.set_position(position);
 		renderer.create_scene(camera, shader_program);
-		renderer.draw(glm::vec2(-790, -590), glm::vec2(80, 220), texture_0);
-		renderer.draw(glm::vec2(700, -290), glm::vec2(80, 220), texture_0);
-		renderer.draw(glm::vec2(0, 0), glm::vec2(200, 200), texture_1);
+		renderer.draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
+		renderer.draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0);
+		renderer.draw(glm::vec2(400, 300), glm::vec2(200, 200), texture_1);
 
 		// Flush everything to gpu
 		renderer.flush();

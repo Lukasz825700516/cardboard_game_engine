@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
     - uses: openrndr/setup-opengl@v1
     - run: |
         sudo apt-get install libgl1-mesa-dev libglm-dev libglfw3-dev
