@@ -17,7 +17,7 @@ jobs:
         submodules: 'recursive'
     - uses: openrndr/setup-opengl@v1
     - run: |
-        sudo apt-get install libgl1-mesa-dev libglm-dev libglfw3-dev libxinerama-dev libxcursor-dev
+        sudo apt-get install libgl1-mesa-dev libglm-dev libglfw3-dev libxinerama-dev libxcursor-dev libxi-dev
         xvfb-run glxinfo
     - name: cmake
       run: cmake . -DCARDBOARD_GRAPHICS_TARGET=opengl -DCARDBOARD_RESOURCES_WINDOWS_TARGET=glfw
