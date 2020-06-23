@@ -51,6 +51,7 @@ int main() {
 
 	Texture texture_0(TextureLoader::load_texture("assets/sample.png").value());
 	Texture texture_1(TextureLoader::load_texture("assets/soup.png").value());
+	ParticleSystem ps;
 
 
 	while (!ctx.get_window().should_close()) {
@@ -75,6 +76,9 @@ int main() {
 		last_mouse_position = mouse_position;
 
 		// Update something
+		ps.summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f, glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
+		ps.summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + glm::vec2(80, 0), glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
+		ps.update(0.1);
 
 		// Render something
 		camera.set_position(position);
@@ -82,6 +86,7 @@ int main() {
 		renderer.draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
 		renderer.draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0);
 		renderer.draw(glm::vec2(400, 300), glm::vec2(200, 200), texture_1);
+		ps.flush(renderer);
 
 		// Flush everything to gpu
 		renderer.flush();
