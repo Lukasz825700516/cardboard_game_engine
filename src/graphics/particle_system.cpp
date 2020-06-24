@@ -9,6 +9,12 @@ namespace cardboard::graphics {
 		position(glm::vec2(0)),
    		velocity(glm::vec2(0)),
 		accelereration(glm::vec2(0)),
+		initial_size(glm::vec2(0)),
+		finale_size(glm::vec2(0)),
+		initial_rotation(0),
+		finale_rotation(0),
+		initial_color(glm::vec4(1)),
+		finale_color(glm::vec4(1)),
 		max_lifetime(0),
 		life_time(0) {}
 
@@ -29,6 +35,12 @@ namespace cardboard::graphics {
 		position(particle.position),
    		velocity(particle.velocity),
 		accelereration(particle.accelereration),
+		initial_size(particle.initial_size),
+		finale_size(particle.finale_size),
+		initial_rotation(particle.initial_rotation),
+		finale_rotation(particle.finale_rotation),
+		initial_color(particle.initial_color),
+		finale_color(particle.finale_color),
 		max_lifetime(particle.max_lifetime),
 		life_time(particle.life_time) {}
 
@@ -36,6 +48,12 @@ namespace cardboard::graphics {
 		position(std::move(particle.position)),
    		velocity(std::move(particle.velocity)),
 		accelereration(std::move(particle.accelereration)),
+		initial_size(std::move(particle.initial_size)),
+		finale_size(std::move(particle.finale_size)),
+		initial_rotation(std::exchange(particle.initial_rotation, 0)),
+		finale_rotation(std::exchange(particle.finale_rotation, 0)),
+		initial_color(std::move(particle.initial_color)),
+		finale_color(std::move(particle.finale_color)),
 		max_lifetime(std::exchange(particle.max_lifetime, 0)),
 		life_time(std::exchange(particle.life_time, 0)) {}
 
