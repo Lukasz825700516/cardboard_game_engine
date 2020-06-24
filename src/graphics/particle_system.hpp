@@ -10,11 +10,17 @@ namespace cardboard::graphics {
 		glm::vec2 position;
 		glm::vec2 velocity;
 		glm::vec2 accelereration;
+		glm::vec2 initial_size;
+		glm::vec2 finale_size;
+		float initial_rotation;
+		float finale_rotation;
+		glm::vec4 initial_color;
+		glm::vec4 finale_color;
 		float max_lifetime;
 		float life_time;
 
 		Particle();
-		Particle(glm::vec2, glm::vec2, glm::vec2, float);
+		Particle(glm::vec2, glm::vec2, glm::vec2, glm::vec2, glm::vec2, float, float, glm::vec4, glm::vec4, float);
 		Particle(Particle&);
 		Particle(Particle&&);
 
@@ -22,14 +28,19 @@ namespace cardboard::graphics {
 		Particle& operator=(Particle&&);
 	};
 
-
-	class ParticleSystem {
-	private:
+	class ParticleSystemInstance {
+	public:
 		std::vector<Particle> particles;
 
+		ParticleSystemInstance();
+	};
+
+	class ParticleSystem {
 	public:
-		void update(float time_delta);
-		void summon(glm::vec2 position, glm::vec2 initial_velocity, glm::vec2 accelereration, float life_time);
-		void flush(QuadRenderer& renderer);
+		static ParticleSystemInstance* instance;
+		static void update(float time_delta);
+		static void summon(glm::vec2 position, glm::vec2 initial_velocity, glm::vec2 accelereration, float life_time);
+		template<typename renderer>
+		static void draw();
 	};
 }

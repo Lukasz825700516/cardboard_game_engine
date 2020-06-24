@@ -3,6 +3,8 @@
 #include <utility>
 
 namespace cardboard::graphics {
+	ParticleSystemInstance* ParticleSystem::instance = nullptr;
+
 	Particle::Particle():
 		position(glm::vec2(0)),
    		velocity(glm::vec2(0)),
@@ -10,10 +12,16 @@ namespace cardboard::graphics {
 		max_lifetime(0),
 		life_time(0) {}
 
-	Particle::Particle(glm::vec2 position, glm::vec2 velocity, glm::vec2 accelereration, float max_lifetime):
+	Particle::Particle(glm::vec2 position, glm::vec2 velocity, glm::vec2 accelereration, glm::vec2 size, glm::vec2 finale_size, float rotation, float finale_rotation, glm::vec4 color, glm::vec4 finale_color, float max_lifetime):
 		position(position),
 		velocity(velocity),
 		accelereration(accelereration),
+		initial_size(size),
+		finale_size(finale_size),
+		initial_rotation(rotation),
+		finale_rotation(finale_rotation),
+		initial_color(color),
+		finale_color(finale_color),
 		max_lifetime(max_lifetime),
 		life_time(0) {}
 
@@ -51,26 +59,31 @@ namespace cardboard::graphics {
 		return *this;
 	}
 
+	ParticleSystemInstance::ParticleSystemInstance() {
+		ParticleSystem::instance = this;
+	}
+
 	void ParticleSystem::summon(glm::vec2 position, glm::vec2 initial_velocity, glm::vec2 accelereration, float max_lifetime) {
-		this->particles.emplace_back(position, initial_velocity, accelereration, max_lifetime);
+		instance->particles.emplace_back(position, initial_velocity, accelereration, glm::vec2(10), glm::vec2(20), 0, 0, glm::vec4(1), glm::vec4(1), max_lifetime);
 	}
 
 	void ParticleSystem::update(float time_delta) {
-		for (auto it = this->particles.begin(); it < this->particles.end(); it++) {
-			it->velocity += it->accelereration * time_delta;
-			it->position += it->velocity * time_delta;
+		for (auto it = instance->particles.begin(); it < instance->particles.end(); it++) {
 			it->life_time += time_delta;
-
 			if (it->life_time > it->max_lifetime) {
-				std::iter_swap(it, this->particles.end() - 1);
-				this->particles.resize(this->particles.size() - 1);
+				std::iter_swap(it, instance->particles.end() - 1);
+				instance->particles.resize(instance->particles.size() - 1);
+			} else {
+				it->velocity += it->accelereration * time_delta;
+				it->position += it->velocity * time_delta;
 			}
 		}
 	}
 
-	void ParticleSystem::flush(QuadRenderer& renderer) {
-		for (Particle& particle : this->particles) {
-			renderer.draw(particle.position, glm::vec2(10));
-		}
+	template<>
+	void ParticleSystem::draw<QuadRenderer>() {
+		for (Particle& particle : instance->particles) {
+			QuadRenderer::draw(particle.position, particle.initial_size + (particle.finale_size - particle.initial_size) / particle.max_lifetime * particle.life_time);
+		} 
 	}
 }

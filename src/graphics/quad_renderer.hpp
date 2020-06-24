@@ -1,5 +1,6 @@
 #pragma once
 
+#include "glm/fwd.hpp"
 #include "graphics/vertex_array.hpp"
 #include <glm/glm.hpp>
 #include <memory>
@@ -9,8 +10,8 @@
 #include "texture_batch.hpp"
 
 namespace cardboard::graphics {
-	class QuadRenderer {
-	private:
+	class QuadRendererInstance {
+	public:
 		unsigned int drawn_vertexes;
 		unsigned int drawn_elements;
 
@@ -22,15 +23,19 @@ namespace cardboard::graphics {
 
 		Shader* last_shader;
 
-	public:
-		QuadRenderer(unsigned int max_vertexes, unsigned int max_elements);
-		QuadRenderer(QuadRenderer&& renderer);
-		~QuadRenderer();
+		QuadRendererInstance(unsigned int, unsigned int);
+		QuadRendererInstance(QuadRendererInstance&&);
+		~QuadRendererInstance();
+	};
 
-		void create_scene(Camera& camera, Shader& shader);
-		void reset_scene();
-		void draw(glm::vec2 position, glm::vec2 size);
-		void draw(glm::vec2 position, glm::vec2 size, Texture& texture);
-		void flush();
+	class QuadRenderer {
+	public:
+		static QuadRendererInstance* instance;
+
+		static void create_scene(Camera&, Shader&);
+		static void reset_scene();
+		static void draw(glm::vec2, glm::vec2);
+		static void draw(glm::vec2, glm::vec2, Texture&);
+		static void flush();
 	};
 }
