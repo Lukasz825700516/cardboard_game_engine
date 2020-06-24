@@ -1,5 +1,3 @@
-#include <glm/fwd.hpp>
-
 #include "graphics/camera.hpp"
 #include "graphics/context.hpp"
 #include "graphics/shader.hpp"
@@ -18,85 +16,70 @@ extern "C" {
 #include <stb_image.h>
 }
 
-using cardboard::graphics::Context;
-using cardboard::resources::Window;
-using cardboard::graphics::Shader;
-using cardboard::graphics::QuadRenderer;
-using cardboard::graphics::QuadRendererInstance;
-using cardboard::graphics::Texture;
-using cardboard::resources::File;
-using cardboard::graphics::Camera;
-using cardboard::resources::Keyboard;
-using cardboard::resources::KeyboardKey;
-using cardboard::resources::Mouse;
-using cardboard::resources::MouseKey;
-using cardboard::resources::TextureLoader;
-using cardboard::graphics::ParticleSystem;
-using cardboard::graphics::ParticleSystemInstance;
+namespace cb_g = cardboard::graphics;
+namespace cb_r = cardboard::resources;
 
 int main() {
-	Context ctx;
-	ctx.set_window(Window("hello world", 800, 600));
+	cb_g::ContextInstance context_instance;
+	cb_g::Context::set_window(Window("hello world", 800, 600));
 
-	Shader shader_program(
-			File::read("assets/simple.vertex.glsl")->c_str(),
-			File::read("assets/simple.fragment.glsl")->c_str());
+	cb_r::KeyboardInstance keyboard_instance(cb_g::Context::get_window());
+	cb_r::MouseInstance mouse_instance(cb_g::Context::get_window());
+	cb_g::QuadRendererInstance quad_renderer_instance(1000, 1000);
+	cb_g::ParticleSystemInstance particle_system_instance;
 
-	QuadRendererInstance quad_renderer_instance(1000, 1000);
-	Camera camera(glm::vec2(800, 600));
-	Keyboard keyboard(ctx.get_window());
-	Mouse mouse(ctx.get_window());
-
+	cb_g::Camera camera(glm::vec2(800, 600));
+	cb_g::Shader shader_program(
+			cb_r::File::read("assets/simple.vertex.glsl")->c_str(),
+			cb_r::File::read("assets/simple.fragment.glsl")->c_str());
+	cb_g::Texture texture_0(cb_r::TextureLoader::load_texture("assets/sample.png").value());
+	cb_g::Texture texture_1(cb_r::TextureLoader::load_texture("assets/soup.png").value());
 	float time = 0;
 	glm::vec2 position = glm::vec2(400, 300);
 	glm::vec2 last_mouse_position = glm::vec2(0.0);
 
-	Texture texture_0(TextureLoader::load_texture("assets/sample.png").value());
-	Texture texture_1(TextureLoader::load_texture("assets/soup.png").value());
-	ParticleSystemInstance particle_system_instance;
 
-
-	while (!ctx.get_window().should_close()) {
+	while (!cb_g::Context::get_window().should_close()) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// Keyboard camera movement
-		if (keyboard.is_key_pressed(KeyboardKey::CARDBOARD_KEYBOARD_LEFT))
+		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_LEFT))
 			position.x -= 10;
-		if (keyboard.is_key_pressed(KeyboardKey::CARDBOARD_KEYBOARD_RIGHT))
+		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_RIGHT))
 			position.x += 10;
-		if (keyboard.is_key_pressed(KeyboardKey::CARDBOARD_KEYBOARD_UP)) 
+		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_UP)) 
 			position.y += 10;
-		if (keyboard.is_key_pressed(KeyboardKey::CARDBOARD_KEYBOARD_DOWN)) 
+		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_DOWN)) 
 			position.y -= 10;
 
 		// Mouse camera movement
-		glm::vec2 mouse_position = mouse.get_position();
-		if (mouse.is_button_pressed(MouseKey::CARDBOARD_MOUSE_LEFT)) {
+		glm::vec2 mouse_position = cb_r::Mouse::get_position();
+		if (cb_r::Mouse::is_button_pressed(cb_r::MouseKey::CARDBOARD_MOUSE_LEFT)) {
 			position += mouse_position - last_mouse_position;
 		}
 		last_mouse_position = mouse_position;
 
 		// Update something
-		ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f, glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
-		ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + glm::vec2(80, 0), glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
-		ParticleSystem::update(0.1);
+		cb_g::ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f, glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
+		cb_g::ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + glm::vec2(80, 0), glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
+		cb_g::ParticleSystem::update(0.1);
 
 		// Render something
 		camera.set_position(position);
-		QuadRenderer::create_scene(camera, shader_program);
+		cb_g::QuadRenderer::create_scene(camera, shader_program);
 
-		QuadRenderer::draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
-		QuadRenderer::draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0);
-		QuadRenderer::draw(glm::vec2(400, 300), glm::vec2(200, 200), texture_1);
+		cb_g::QuadRenderer::draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
+		cb_g::QuadRenderer::draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0);
+		cb_g::QuadRenderer::draw(glm::vec2(400, 300), glm::vec2(200, 200), texture_1);
 
-		ParticleSystem::draw<QuadRenderer>();
+		cb_g::ParticleSystem::draw<cb_g::QuadRenderer>();
 
 		// Flush everything to gpu
-		QuadRenderer::flush();
+		cb_g::QuadRenderer::flush();
 
-		ctx.get_window().swap_buffers();
-		ctx.get_window().poll_events();
+		cb_g::Context::get_window().swap_buffers();
+		cb_g::Context::get_window().poll_events();
 
 		time += 1;
 	}

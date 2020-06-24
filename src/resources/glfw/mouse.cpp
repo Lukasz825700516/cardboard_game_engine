@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 
 namespace cardboard::resources {
+	MouseInstance* Mouse::instance = nullptr;
 	glm::vec2 MousePlatfromData::position;
 	std::map<int, bool> MousePlatfromData::keys;
 
@@ -36,28 +37,28 @@ namespace cardboard::resources {
 		(void)mods;
 	}
 
-	Mouse::Mouse(Window& window):
+	MouseInstance::MouseInstance(Window& window):
 		data(window.get_data().window) {}
 
-	Mouse::~Mouse() {}
+	MouseInstance::~MouseInstance() {}
 
 	glm::vec2 Mouse::get_position() {
-		return this->data.position;
+		return instance->data.position;
 	}
 
 	void Mouse::set_mode(MouseMode mode) {
 		switch(mode) {
-			case CARDBOARD_MOUSE_NORMAL: glfwSetInputMode(this->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_NORMAL); return;
-			case CARDBOARD_MOUSE_HIDDEN: glfwSetInputMode(this->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_HIDDEN); return;
-			case CARDBOARD_MOUSE_DISABLED: glfwSetInputMode(this->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_DISABLED); return;
+			case CARDBOARD_MOUSE_NORMAL: glfwSetInputMode(instance->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_NORMAL); return;
+			case CARDBOARD_MOUSE_HIDDEN: glfwSetInputMode(instance->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_HIDDEN); return;
+			case CARDBOARD_MOUSE_DISABLED: glfwSetInputMode(instance->data.window_ptr, GLFW_CURSOR, GLFW_CURSOR_DISABLED); return;
 		}
 	}
 
 	bool Mouse::is_button_pressed(MouseKey key) {
 		switch(key) {
-			case CARDBOARD_MOUSE_LEFT: return this->data.keys[GLFW_MOUSE_BUTTON_LEFT];
-			case CARDBOARD_MOUSE_MIDDLE: return this->data.keys[GLFW_MOUSE_BUTTON_MIDDLE];
-			case CARDBOARD_MOUSE_RIGHT: return this->data.keys[GLFW_MOUSE_BUTTON_RIGHT];
+			case CARDBOARD_MOUSE_LEFT: return instance->data.keys[GLFW_MOUSE_BUTTON_LEFT];
+			case CARDBOARD_MOUSE_MIDDLE: return instance->data.keys[GLFW_MOUSE_BUTTON_MIDDLE];
+			case CARDBOARD_MOUSE_RIGHT: return instance->data.keys[GLFW_MOUSE_BUTTON_RIGHT];
 
 			default: return false;
 		}

@@ -4,6 +4,7 @@
 
 namespace cardboard::resources {
 	std::map<int, bool> KeyboardPlatformData::keys;
+	KeyboardInstance* Keyboard::instance = nullptr;
 
 	KeyboardPlatformData::KeyboardPlatformData(GLFWwindow* window_ptr) {
 		glfwSetKeyCallback(window_ptr, KeyboardPlatformData::key_callback);
@@ -31,10 +32,12 @@ namespace cardboard::resources {
 		(void)mods;	
 	}
 
-	Keyboard::Keyboard(Window& window):
-   		data(window.get_data().window) {}
+	KeyboardInstance::KeyboardInstance(Window& window):
+   		data(window.get_data().window) {
+		Keyboard::instance = this;	
+	}
 
-	Keyboard::~Keyboard() {}
+	KeyboardInstance::~KeyboardInstance() {}
 
 
 	bool Keyboard::is_key_pressed(KeyboardKey key) {

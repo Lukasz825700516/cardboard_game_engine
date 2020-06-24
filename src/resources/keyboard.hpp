@@ -4,14 +4,18 @@
 #include "keyboard_key.hpp"
 
 namespace cardboard::resources {
-	class Keyboard {
-	private:
+	class KeyboardInstance {
+	public:
 		KeyboardPlatformData data;
 
-	public:
-		Keyboard(Window& window);
-		~Keyboard();
+		KeyboardInstance(Window& window);
+		~KeyboardInstance();
+	};
 
-		bool is_key_pressed(KeyboardKey key);
+	class Keyboard {
+	public:
+		static KeyboardInstance* instance;
+
+		static bool is_key_pressed(KeyboardKey key);
 	};
 }

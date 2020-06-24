@@ -4,15 +4,20 @@
 using cardboard::resources::Window;
 
 namespace cardboard::graphics {
-	class Context {
-		private: 
+	class ContextInstance {
+	public:
 		Window window;
 
-		public:
-		Context();
-		~Context();
+		ContextInstance();
+		~ContextInstance();
+	};
 
-		void set_window(Window&& window);
-		inline Window& get_window() { return this->window; }
+	class Context {
+	public:
+		static ContextInstance* instance;
+
+
+		static void set_window(Window&& window);
+		static inline Window& get_window() { return instance->window; }
 	};
 }

@@ -6,18 +6,20 @@
 #include "mouse_mode.hpp"
 
 namespace cardboard::resources {
-	class Mouse {
-	private:
+	class MouseInstance {
+	public:
 		MousePlatfromData data;
 
+		MouseInstance(Window& window);
+		~MouseInstance();
+	};
+
+	class Mouse {
 	public:
-		Mouse(Window& window);
-		~Mouse();
+		static MouseInstance* instance;
 
-		glm::vec2 get_position();
-
-		void set_mode(MouseMode mode);
-
-		bool is_button_pressed(MouseKey key);
+		static glm::vec2 get_position();
+		static void set_mode(MouseMode mode);
+		static bool is_button_pressed(MouseKey key);
 	};
 }
