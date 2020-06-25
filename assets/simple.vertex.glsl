@@ -3,9 +3,11 @@
 layout (location = 0) in vec2 v_pos;
 layout (location = 1) in vec2 v_uv;
 layout (location = 2) in int v_texture;
+layout (location = 3) in vec4 v_color;
 
 out vec2 vp_uv;
 flat out int vp_texture;
+out vec4 vp_color;
 
 uniform mat4 camera_transform;
 uniform vec2 camera_position;
@@ -15,4 +17,5 @@ void main() {
 
 	vp_uv = v_uv;
 	vp_texture = v_texture;
+	vp_color = v_color;
 }

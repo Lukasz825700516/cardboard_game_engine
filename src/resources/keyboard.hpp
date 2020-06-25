@@ -8,7 +8,10 @@ namespace cardboard::resources {
 	public:
 		KeyboardPlatformData data;
 
-		KeyboardInstance(Window& window);
+		explicit KeyboardInstance();
+		explicit KeyboardInstance(KeyboardInstance&);
+		explicit KeyboardInstance(KeyboardInstance&&) = default;
+		explicit KeyboardInstance(Window& window);
 		~KeyboardInstance();
 	};
 

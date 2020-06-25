@@ -13,10 +13,12 @@ namespace cardboard::graphics {
 		ElementBuffer eb;
 
 	public:
-		VertexArray();
-		VertexArray(VertexArray&& va);
-		VertexArray(VertexBuffer&& vb, ElementBuffer&& eb);
-		~VertexArray();
+		explicit VertexArray();
+		explicit VertexArray(const VertexArray&) = delete;
+		explicit VertexArray(VertexArray&&) = default;
+		~VertexArray() = default;
+
+		explicit VertexArray(VertexBuffer&& vb, ElementBuffer&& eb);
 
 		void bind();
 		void flush();

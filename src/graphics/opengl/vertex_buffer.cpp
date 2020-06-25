@@ -8,8 +8,8 @@ namespace cardboard::graphics {
 		glad_glGenBuffers(1, &this->vertex_buffer_object);
 	}
 
-	VertexBufferPlatformData::VertexBufferPlatformData(VertexBufferPlatformData&& data):
-   		vertex_buffer_object(std::exchange(data.vertex_buffer_object, 0)) {}
+	VertexBufferPlatformData::VertexBufferPlatformData(VertexBufferPlatformData&& other):
+   		vertex_buffer_object(std::exchange(other.vertex_buffer_object, 0)) {}
 
 	VertexBufferPlatformData::~VertexBufferPlatformData() {
 		if (this->vertex_buffer_object) {
@@ -17,13 +17,13 @@ namespace cardboard::graphics {
 		}
 	}
 
-	VertexBuffer::VertexBuffer() {}
-	VertexBuffer::VertexBuffer(VertexBuffer&& vb):
-		data(std::move(vb.data)),
-   		buffer(std::move(vb.buffer)) {}
+	VertexBufferPlatformData& VertexBufferPlatformData::operator=(VertexBufferPlatformData&& other) {
+		this->vertex_buffer_object = std::exchange(other.vertex_buffer_object, 0);
+		return *this;
+	}
+
 	VertexBuffer::VertexBuffer(std::vector<Vertex> buffer):
 		buffer(buffer) {}
-	VertexBuffer::~VertexBuffer() {}
 
 	void VertexBuffer::bind() {
 		glad_glBindBuffer(GL_ARRAY_BUFFER, this->data.vertex_buffer_object);

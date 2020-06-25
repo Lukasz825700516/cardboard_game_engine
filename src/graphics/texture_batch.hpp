@@ -9,12 +9,13 @@ namespace cardboard::graphics {
 		std::vector<unsigned int> loaded_textures;
 
 	public:
-		TextureBatch();
-		TextureBatch(TextureBatch&&);
+		explicit TextureBatch() = default;
+		explicit TextureBatch(const TextureBatch&) = default;
+		explicit TextureBatch(TextureBatch&&) = default;
+		~TextureBatch() = default;
 
 		bool push(Texture& texture);
 		unsigned int get(Texture& texture);
-
 		void flush(Shader& shader);
 	};
 }

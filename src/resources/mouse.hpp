@@ -10,8 +10,12 @@ namespace cardboard::resources {
 	public:
 		MousePlatfromData data;
 
-		MouseInstance(Window& window);
+		explicit MouseInstance() = delete;
+		explicit MouseInstance(MouseInstance&);
+		explicit MouseInstance(MouseInstance&&) = default;
 		~MouseInstance();
+
+		explicit MouseInstance(Window& window);
 	};
 
 	class Mouse {

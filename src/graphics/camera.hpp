@@ -10,14 +10,15 @@ namespace cardboard::graphics {
 		glm::vec2 position;
 
 	public:
-		Camera();
-		Camera(glm::vec2 dimensions);
-		Camera(Camera& camera);
-		Camera(Camera&& camera);
-		~Camera();
+		explicit Camera() = default;
+		explicit Camera(const Camera&) = default;
+		explicit Camera(Camera&&) = default;
+		~Camera() = default;
+		Camera& operator=(Camera&) = default;
+		Camera& operator=(Camera&&) = default;
 
-		Camera& operator=(Camera& camera);
-		Camera& operator=(Camera&& camera);
+		Camera(glm::vec2 dimensions);
+
 
 		void set_dimensions(glm::vec2 dimensions);
 		void set_position(glm::vec2 position);

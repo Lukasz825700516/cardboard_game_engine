@@ -5,8 +5,11 @@ namespace cardboard::graphics {
 	public:
 		unsigned int element_buffer_object;
 
-		ElementBufferPlatformData();
-		ElementBufferPlatformData(ElementBufferPlatformData&& data);
+		explicit ElementBufferPlatformData();
+		explicit ElementBufferPlatformData(const ElementBufferPlatformData&) = delete;
+		explicit ElementBufferPlatformData(ElementBufferPlatformData&&);
 		~ElementBufferPlatformData();
+
+		ElementBufferPlatformData& operator=(ElementBufferPlatformData&&);
 	};
 }

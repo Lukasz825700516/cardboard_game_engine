@@ -13,9 +13,12 @@ namespace cardboard::graphics {
 		TextureData texture_data;
 
 	public:
+		explicit Texture() = delete;
+		explicit Texture(const Texture&) = delete;
+		explicit Texture(Texture&&) = default;
+		~Texture() = default;
+
 		Texture(TextureData&& texture_data);
-		Texture(Texture&& texture);
-		~Texture();
 
 		void bind(unsigned int index);
 		inline TexturePlatformData& data() { return this->platform_data; }

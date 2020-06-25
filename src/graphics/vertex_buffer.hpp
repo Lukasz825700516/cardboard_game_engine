@@ -17,10 +17,12 @@ namespace cardboard::graphics {
 		void flush();
 		inline void resize(unsigned int size) { this->buffer.resize(size); }
 
-		VertexBuffer();
-		VertexBuffer(VertexBuffer&& vb);
-		VertexBuffer(std::vector<Vertex> buffer);
-		~VertexBuffer();
+		explicit VertexBuffer() = default;
+		explicit VertexBuffer(const VertexBuffer&) = delete;
+		explicit VertexBuffer(VertexBuffer&&) = default;
+		~VertexBuffer() = default;
+
+		explicit VertexBuffer(std::vector<Vertex> buffer);
 
 		Vertex& operator[](unsigned int index);
 	};

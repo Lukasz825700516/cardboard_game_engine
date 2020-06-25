@@ -4,12 +4,14 @@
 namespace cardboard::resources {
 	class WindowPlatformData {
 		public:
-			GLFWwindow *window;
-
-			WindowPlatformData();
-			WindowPlatformData(const char* name, unsigned int width, unsigned int height);
-			WindowPlatformData(WindowPlatformData&& data);
+			explicit WindowPlatformData();
+			explicit WindowPlatformData(WindowPlatformData& data) = delete;
+			explicit WindowPlatformData(WindowPlatformData&& data);
 			~WindowPlatformData();
+
+			explicit WindowPlatformData(const char* name, unsigned int width, unsigned int height);
+
+			GLFWwindow *window = nullptr;
 
 			WindowPlatformData& operator=(WindowPlatformData&& data);
 	};

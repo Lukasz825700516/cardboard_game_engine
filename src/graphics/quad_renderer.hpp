@@ -23,9 +23,12 @@ namespace cardboard::graphics {
 
 		Shader* last_shader;
 
-		QuadRendererInstance(unsigned int, unsigned int);
-		QuadRendererInstance(QuadRendererInstance&&);
-		~QuadRendererInstance();
+		explicit QuadRendererInstance() = delete;
+		explicit QuadRendererInstance(QuadRendererInstance&) = delete;
+		explicit QuadRendererInstance(QuadRendererInstance&&) = default;
+		~QuadRendererInstance() = default;
+
+		explicit QuadRendererInstance(unsigned int, unsigned int);
 	};
 
 	class QuadRenderer {
@@ -36,6 +39,10 @@ namespace cardboard::graphics {
 		static void reset_scene();
 		static void draw(glm::vec2, glm::vec2);
 		static void draw(glm::vec2, glm::vec2, Texture&);
+		static void draw(glm::vec2, glm::vec2, Texture&, glm::vec4);
+		static void draw_rotated(glm::vec2, glm::vec2, float);
+		static void draw_rotated(glm::vec2, glm::vec2, float, Texture&);
+		static void draw_rotated(glm::vec2, glm::vec2, float, Texture&, glm::vec4);
 		static void flush();
 	};
 }

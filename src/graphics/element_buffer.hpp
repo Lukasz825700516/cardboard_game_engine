@@ -12,14 +12,17 @@ namespace cardboard::graphics {
 
 		std::vector<glm::uvec3> buffer;
 	public:
+		explicit ElementBuffer() = default;
+		explicit ElementBuffer(const ElementBuffer&) = delete;
+		explicit ElementBuffer(ElementBuffer&&) = default;
+		~ElementBuffer() = default;
+
+		explicit ElementBuffer(std::vector<glm::uvec3> buffer);
+
 		void bind();
 		void flush();
 		inline void resize(unsigned int size) { this->buffer.resize(size); }
 
-		ElementBuffer();
-		ElementBuffer(ElementBuffer&& eb);
-		ElementBuffer(std::vector<glm::uvec3> buffer);
-		~ElementBuffer();
 
 		glm::uvec3& operator[](unsigned int index);
 	};

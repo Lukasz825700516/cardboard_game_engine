@@ -31,7 +31,6 @@ if(CARDBOARD_GRAPHICS_TARGET STREQUAL "opengl")
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/quad_renderer.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/texture.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/opengl/texture_batch.cpp
-		${PROJECT_SOURCE_DIR}/src/graphics/texture_data.cpp
 		${PROJECT_SOURCE_DIR}/src/graphics/particle_system.cpp
 	)
 else()
@@ -61,7 +60,6 @@ file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${PROJECT_BINARY_DIR})
 set(SOURCES
 	${PROJECT_SOURCE_DIR}/src/main.cpp
 	${PROJECT_SOURCE_DIR}/src/resources/file.cpp
-	${PROJECT_SOURCE_DIR}/src/graphics/vertex.cpp
 	${PROJECT_SOURCE_DIR}/src/graphics/camera.cpp
 	${CARDBOARD_RESOURCES_WINDOWS_SOURCES}
 	${CARDBOARD_GRAPHICS_SOURCES}

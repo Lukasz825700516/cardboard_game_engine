@@ -8,11 +8,9 @@ namespace cardboard::graphics {
 	ElementBufferPlatformData::ElementBufferPlatformData() {
 		glad_glGenBuffers(1, &this->element_buffer_object);
 	}
-
-	ElementBufferPlatformData::ElementBufferPlatformData(ElementBufferPlatformData&& data):
-   		element_buffer_object(std::exchange(data.element_buffer_object, 0)) {
-		glad_glGenBuffers(1, &this->element_buffer_object);
-	}
+	
+	ElementBufferPlatformData::ElementBufferPlatformData(ElementBufferPlatformData&& other):
+   		element_buffer_object(std::exchange(other.element_buffer_object, 0)) {}
 
 	ElementBufferPlatformData::~ElementBufferPlatformData() {
 		if (element_buffer_object) {
@@ -20,15 +18,13 @@ namespace cardboard::graphics {
 		}
 	}
 
-	ElementBuffer::ElementBuffer() {}
-	ElementBuffer::ElementBuffer(ElementBuffer&& eb):
-		data(std::move(eb.data)),
-   		buffer(std::move(eb.buffer)) {}
+	ElementBufferPlatformData& ElementBufferPlatformData::operator=(ElementBufferPlatformData&& other) {
+		this->element_buffer_object = std::exchange(other.element_buffer_object, 0);
+		return *this;
+	}
 
 	ElementBuffer::ElementBuffer(std::vector<glm::uvec3> buffer):
 		buffer(buffer) {}
-
-	ElementBuffer::~ElementBuffer() {}
 
 	void ElementBuffer::bind() {
 		glad_glBindBuffer(GL_ARRAY_BUFFER, this->data.element_buffer_object);

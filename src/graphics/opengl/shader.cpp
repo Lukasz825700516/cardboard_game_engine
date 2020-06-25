@@ -8,6 +8,24 @@
 #include "../context.hpp"
 
 namespace cardboard::graphics {
+	ShaderPlatformData::ShaderPlatformData() {
+		this->shader_program = glad_glCreateProgram();
+	}
+
+	ShaderPlatformData::ShaderPlatformData(ShaderPlatformData&& other):
+   		shader_program(std::exchange(other.shader_program, 0)),
+   		uniforms(std::move(other.uniforms)) {}
+
+	ShaderPlatformData::~ShaderPlatformData() {
+		glDeleteProgram(this->shader_program);
+	}
+
+	ShaderPlatformData& ShaderPlatformData::operator=(ShaderPlatformData&& other) {
+		this->shader_program = std::exchange(other.shader_program, 0);
+		this->uniforms = std::move(other.uniforms);
+		return *this;
+	}
+
 	Shader::Shader(const char* vertex_code, const char* fragment_code) {
 		const size_t BUFF_SIZE = 512;
 
@@ -38,7 +56,6 @@ namespace cardboard::graphics {
 			std::cerr << "Failed to compile fragment shader\n" << buff << std::endl;
 		}
 
-		this->data.shader_program = glad_glCreateProgram();
 		glad_glAttachShader(this->data.shader_program, vertex_shader);
 		glad_glAttachShader(this->data.shader_program, fragment_shader);
 		glad_glLinkProgram(this->data.shader_program);
@@ -54,10 +71,6 @@ namespace cardboard::graphics {
 
 		glad_glDeleteShader(vertex_shader);
 		glad_glDeleteShader(fragment_shader);
-	}
-
-	Shader::~Shader() {
-		glDeleteProgram(this->data.shader_program);
 	}
 
 	void Shader::bind() {

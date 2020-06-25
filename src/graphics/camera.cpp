@@ -4,40 +4,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 namespace cardboard::graphics {
-	Camera::Camera() {}
-
-	Camera::Camera(Camera& camera):
-   		transfomation(camera.transfomation),
-		dimensions(camera.dimensions),
-		position(camera.position) {}
-
 	Camera::Camera(glm::vec2 dimensions):
 		dimensions(dimensions / 2.0f) {
 	
 		this->calculate();
-	}
-
-	Camera::Camera(Camera&& camera):
-   		transfomation(std::move(camera.transfomation)),
-		dimensions(std::move(camera.dimensions)),
-		position(std::move(camera.position)) {}
-
-	Camera::~Camera() {}
-
-	Camera& Camera::operator=(Camera& camera) {
-		this->transfomation = camera.transfomation;
-		this->dimensions = camera.dimensions;
-		this->position = camera.position;
-
-		return *this;
-	}
-
-	Camera& Camera::operator=(Camera&& camera) {
-		this->transfomation = std::move(camera.transfomation);
-		this->dimensions = std::move(camera.dimensions);
-		this->position = std::move(camera.position);
-
-		return *this;
 	}
 
 	void Camera::set_dimensions(glm::vec2 dimensions) {

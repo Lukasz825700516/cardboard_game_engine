@@ -1,0 +1,13 @@
+{
+	"Particle": {
+		"position": { "type": "glm::vec2", "default": "glm::vec2(0)"},
+		"acceleration": { "type": "glm::vec2", "default": "glm::vec2(0)"},
+		"velocity": { "type": "glm::vec2", "default": "glm::vec2(0)"},
+		"size": { "type": "glm::vec2", "default": "glm::vec2(0)"},
+		"size_delta": { "type": "glm::vec2", "default": "glm::vec2(0)"},
+		"rotation": { "type": "float", "default": "0"},
+		"rotation_delta": { "type": "float", "default": "0"},
+		"color": { "type": "glm::vec4", "default": "glm::vec4(0)"},
+		"color_delta": { "type": "glm::vec4", "default": "glm::vec4(0)"}
+	}
+}

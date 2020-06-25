@@ -23,6 +23,7 @@ namespace cardboard::graphics {
 
 	ContextInstance::~ContextInstance() {
 		glfwTerminate();
+		Context::instance = nullptr;
 	}
 
 	void Context::set_window(Window&& window) {

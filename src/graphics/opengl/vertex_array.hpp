@@ -4,10 +4,13 @@
 namespace cardboard::graphics {
 	class VertexArrayPlatformData {
 	public:
-		unsigned int vertex_buffer_array;
-
-		VertexArrayPlatformData();
-		VertexArrayPlatformData(VertexArrayPlatformData&& data);
+		explicit VertexArrayPlatformData();
+		explicit VertexArrayPlatformData(const VertexArrayPlatformData&) = delete;
+		explicit VertexArrayPlatformData(VertexArrayPlatformData&&);
 		~VertexArrayPlatformData();
+
+		VertexArrayPlatformData& operator=(VertexArrayPlatformData&&);
+
+		unsigned int vertex_buffer_array;
 	};
 }

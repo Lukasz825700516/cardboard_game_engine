@@ -13,14 +13,16 @@ namespace cardboard::graphics {
 
 	class TextureData {
 	public:
+		explicit TextureData() = default;
+		explicit TextureData(const TextureData&) = default;
+		explicit TextureData(TextureData&&) = default;
+		~TextureData() = default;
+
+		explicit TextureData(glm::uvec2, TextureChannels);
+
 		glm::uvec2 dimensions;
 		TextureChannels channels;
 		std::vector<unsigned char> data;
-
-		TextureData();
-		TextureData(glm::uvec2 dimensions, TextureChannels channels);
-		TextureData(TextureData&& data);
-		~TextureData();
 	};
 }
 

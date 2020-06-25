@@ -4,10 +4,6 @@
 #include <iostream>
 
 namespace cardboard::graphics {
-	TextureBatch::TextureBatch() {}
-	TextureBatch::TextureBatch(TextureBatch&& batch):
-   		loaded_textures(std::move(batch.loaded_textures)) {}
-
 	bool TextureBatch::push(Texture& texture) {
 		// Check if texture already was pushed
 		for (unsigned int id : this->loaded_textures) {

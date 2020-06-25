@@ -35,24 +35,17 @@ namespace cardboard::graphics {
 		glad_glBindTexture(GL_TEXTURE_2D, this->texture_id);
 	}
 
-	TexturePlatformData::TexturePlatformData(TexturePlatformData&& data):
-		texture_id(std::exchange(data.texture_id, 0)) {}
-
 	TexturePlatformData::~TexturePlatformData() {
 		if (this->texture_id) {
 			glad_glDeleteTextures(1, &this->texture_id);
 		}
 	}
 
-	Texture::Texture(TextureData&& texture_data):
-   		platform_data(texture_data),
-   		texture_data(std::move(texture_data)) {}
-
-	Texture::Texture(Texture&& texture):
-		platform_data(std::move(texture.platform_data)),
-   		texture_data(std::move(texture.texture_data)) {}
-
-	Texture::~Texture() {}
+	Texture::Texture(TextureData&& data):
+		platform_data(data),
+   		texture_data(std::move(data)) {
+	
+	}
 
 	void Texture::bind(unsigned int index) {
 		glad_glBindTexture(GL_TEXTURE_2D, this->platform_data.texture_id);

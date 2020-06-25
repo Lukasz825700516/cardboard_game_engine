@@ -11,11 +11,14 @@ namespace cardboard::resources {
 		static void key_callback(GLFWwindow* window_ptr, int key, int action, int mods);
 
 	public:
-		GLFWwindow* window_ptr;
-
-		MousePlatfromData(GLFWwindow* window_ptr);
+		explicit MousePlatfromData() = delete;
+		explicit MousePlatfromData(MousePlatfromData&);
+		explicit MousePlatfromData(MousePlatfromData&&) = default;
 		~MousePlatfromData();
 
+		explicit MousePlatfromData(GLFWwindow* window_ptr);
+
+		GLFWwindow* window_ptr;
 		static glm::vec2 position;
 		static std::map<int, bool> keys;
 	};

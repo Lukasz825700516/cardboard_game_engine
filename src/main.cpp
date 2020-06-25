@@ -34,6 +34,11 @@ int main() {
 			cb_r::File::read("assets/simple.fragment.glsl")->c_str());
 	cb_g::Texture texture_0(cb_r::TextureLoader::load_texture("assets/sample.png").value());
 	cb_g::Texture texture_1(cb_r::TextureLoader::load_texture("assets/soup.png").value());
+	cb_g::Particle simple_particle_template;
+	simple_particle_template
+		.set_life_time(10)
+		.set_size(glm::vec2(10), glm::vec2(20))
+		.set_color(glm::vec4(1, 0, 0, 1), glm::vec4(0.75, 0.25, 0, 0));
 	float time = 0;
 	glm::vec2 position = glm::vec2(400, 300);
 	glm::vec2 last_mouse_position = glm::vec2(0.0);
@@ -61,8 +66,12 @@ int main() {
 		last_mouse_position = mouse_position;
 
 		// Update something
-		cb_g::ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f, glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
-		cb_g::ParticleSystem::summon(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + glm::vec2(80, 0), glm::vec2(std::sin(time) * 2.0f, 10), glm::vec2(0, std::cos(time) + 1) / 2.0f, 10);
+		simple_particle_template
+			.set_position(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + position)
+			.set_velocity(glm::vec2(std::sin(time) * 2.0f, 10))
+			.set_acceleration(glm::vec2(2, std::cos(time) + 1) / 2.0f);
+
+		cb_g::ParticleSystem::summon(simple_particle_template);
 		cb_g::ParticleSystem::update(0.1);
 
 		// Render something
@@ -70,10 +79,10 @@ int main() {
 		cb_g::QuadRenderer::create_scene(camera, shader_program);
 
 		cb_g::QuadRenderer::draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
-		cb_g::QuadRenderer::draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0);
-		cb_g::QuadRenderer::draw(glm::vec2(400, 300), glm::vec2(200, 200), texture_1);
+		cb_g::QuadRenderer::draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0, glm::vec4(0, 1, 0, 0.5));
+		cb_g::QuadRenderer::draw_rotated(glm::vec2(400, 300), glm::vec2(200, 200), 45, texture_1);
 
-		cb_g::ParticleSystem::draw<cb_g::QuadRenderer>();
+		cb_g::ParticleSystem::draw<cb_g::QuadRenderer>(texture_1);
 
 		// Flush everything to gpu
 		cb_g::QuadRenderer::flush();

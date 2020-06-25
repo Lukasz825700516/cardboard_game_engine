@@ -4,6 +4,7 @@ uniform sampler2D u_textures[16];
 
 in vec2 vp_uv;
 flat in int vp_texture;
+in vec4 vp_color;
 
 out vec4 vo_color;
 
@@ -29,5 +30,5 @@ void main() {
 		case 15: texture_color = texture(u_textures[15], vp_uv); break;
 	}
 
-	vo_color = texture_color;
+	vo_color = texture_color * vp_color;
 }

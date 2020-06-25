@@ -37,8 +37,9 @@ namespace cardboard::resources {
 		Keyboard::instance = this;	
 	}
 
-	KeyboardInstance::~KeyboardInstance() {}
-
+	KeyboardInstance::~KeyboardInstance() {
+		Keyboard::instance = nullptr;
+	}
 
 	bool Keyboard::is_key_pressed(KeyboardKey key) {
 		switch (key) {

@@ -12,8 +12,11 @@ namespace cardboard::graphics {
 		ShaderPlatformData data;
 
 	public:
-		Shader(const char* vertex_code, const char* fragment_code);
-		~Shader();
+		explicit Shader() = delete;
+		explicit Shader(const Shader&) = delete;
+		explicit Shader(Shader&&) = default;
+		~Shader() = default;
+		explicit Shader(const char* vertex_code, const char* fragment_code);
 		
 		void bind();
 

@@ -27,6 +27,6 @@ namespace cardboard::resources {
 
 		stbi_image_free(texture);
 
-		return data;
+		return std::optional(TextureData(data));
 	}
 }
