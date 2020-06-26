@@ -100,7 +100,9 @@ int main() {
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		ImGui::ShowDemoWindow();
+		ImGui::Begin("Test");
+		ImGui::InputFloat4("Particle collor", (float*)&simple_particle_template.color);
+		ImGui::End();
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
