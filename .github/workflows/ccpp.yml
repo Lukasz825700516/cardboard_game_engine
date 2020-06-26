@@ -20,6 +20,6 @@ jobs:
         sudo apt-get install libgl1-mesa-dev libglm-dev libglfw3-dev libxinerama-dev libxcursor-dev libxi-dev
         xvfb-run glxinfo
     - name: cmake
-      run: cmake . -DCARDBOARD_GRAPHICS_TARGET=opengl -DCARDBOARD_RESOURCES_WINDOWS_TARGET=glfw
+      run: cmake . -DCARDBOARD_GRAPHICS_TARGET=opengl -DCARDBOARD_WINDOWS_TARGET=glfw
     - name: make
-      run: make
+      run: make cardboard_game_engine
