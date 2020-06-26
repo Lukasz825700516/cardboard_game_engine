@@ -21,6 +21,7 @@ include_directories(${PROJECT_SOURCE_DIR}/dep/glm)
 
 # IMGUI - editor gui
 include_directories(${PROJECT_SOURCE_DIR}/dep/imgui)
+include_directories(${PROJECT_SOURCE_DIR}/dep/cardboard_imgui)
 set(IMGUI_SOURCES ${IMGUI_SOURCES}
 	${PROJECT_SOURCE_DIR}/dep/imgui/imgui.cpp
 	${PROJECT_SOURCE_DIR}/dep/imgui/imgui_draw.cpp
