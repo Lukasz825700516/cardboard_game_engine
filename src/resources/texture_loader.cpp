@@ -14,7 +14,7 @@ namespace cardboard::resources {
 
 		stbi_set_flip_vertically_on_load_thread(true);
 		unsigned char* texture_begin = stbi_load(path, &x, &y, &channels, 0);
-		unsigned char* texture_end = texture_begin + x * y * channels * sizeof(*texture_begin);
+		unsigned char* texture_end = texture_begin + x * y * channels;
 
 		switch (channels) {
 			case 1: data.channels = graphics::CARDBOARD_TEXTURE_R; break;
@@ -24,7 +24,9 @@ namespace cardboard::resources {
 		}
 
 		data.dimensions = glm::uvec2(x, y);
-		data.data = std::vector(texture_begin, texture_end);
+		data.data = std::vector(
+			std::vector<unsigned char>::iterator(texture_begin),
+			std::vector<unsigned char>::iterator(texture_end));
 
 		stbi_image_free(texture_begin);
 
