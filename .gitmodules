@@ -6,3 +6,6 @@
 	path = dep/glfw
 	url = git@github.com:glfw/glfw.git
 	branch = 3.3-stable
+[submodule "dep/imgui"]
+	path = dep/imgui
+	url = git@github.com:ocornut/imgui.git
