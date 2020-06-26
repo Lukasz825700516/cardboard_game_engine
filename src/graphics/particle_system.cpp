@@ -49,5 +49,15 @@ namespace cardboard::graphics {
 
 	void swap(cardboard::graphics::Particle& lhs, cardboard::graphics::Particle& rhs) {
 		std::swap(lhs.position, rhs.position);
+		std::swap(lhs.velocity, rhs.velocity);
+		std::swap(lhs.accelereration, rhs.accelereration);
+		std::swap(lhs.size, rhs.size);
+		std::swap(lhs.size_delta, rhs.size_delta);
+		std::swap(lhs.rotation, rhs.rotation);
+		std::swap(lhs.rotation_delta, rhs.rotation_delta);
+		std::swap(lhs.color, rhs.color);
+		std::swap(lhs.color_delta, rhs.color_delta);
+		std::swap(lhs.age, rhs.age);
+		std::swap(lhs.life_time, rhs.life_time);
 	}
 }
