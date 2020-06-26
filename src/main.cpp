@@ -1,6 +1,8 @@
 #include "graphics/camera.hpp"
+#include <cardboard_imgui.hpp>
 #include "graphics/context.hpp"
 #include "graphics/shader.hpp"
+#include "imgui.h"
 #include "resources/file.hpp"
 #include "resources/keyboard.hpp"
 #include "resources/mouse.hpp"
@@ -43,6 +45,14 @@ int main() {
 	glm::vec2 position = glm::vec2(400, 300);
 	glm::vec2 last_mouse_position = glm::vec2(0.0);
 
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+	ImGui::StyleColorsDark();
+
+	ImGui_ImplGlfw_InitForOpenGL(cb_g::Context::get_window().get_data().window, true);
+	ImGui_ImplOpenGL3_Init("#version 330 core");
 
 	while (!cb_g::Context::get_window().should_close()) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -85,6 +95,16 @@ int main() {
 		cb_g::ParticleSystem::draw<cb_g::QuadRenderer>(texture_1);
 
 		// Flush everything to gpu
+		
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		ImGui::ShowDemoWindow();
+
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 		cb_g::QuadRenderer::flush();
 
 		cb_g::Context::get_window().swap_buffers();
@@ -92,5 +112,9 @@ int main() {
 
 		time += 1;
 	}
+
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+
 	return 0;
 }
