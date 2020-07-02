@@ -14,6 +14,7 @@
 #include <iostream>
 #include "resources/texture_loader.hpp"
 #include "core/layer.hpp"
+#include "core/timer.hpp"
 
 extern "C" {
 #include <stb_image.h>
@@ -117,6 +118,7 @@ public:
 	}
 
 	void update(float time_delta) {
+		CARDBOARD_TIMER("update");
 		cb_g::ParticleSystem::update(time_delta);
 
 		cb_g::QuadRenderer::create_scene(camera, shader_program);

@@ -9,6 +9,13 @@ set(CARDBOARD_WINDOWS_TARGET "none" CACHE STRING "Gameengine resource window tar
 # --------------------------------------------------------------------------------
 # DEPENDENCIES
 
+# BOOST - To be more crossplatform
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIR})
+set(CARDBOARD_DEPENDENCIES_LIBRARIES ${CARDBOARD_DEPENDENCIES_LIBRARIES}
+	${Boost_LIBRARIES}
+)
+
 # STBI - image loading
 add_subdirectory(${PROJECT_SOURCE_DIR}/dep/stbi)
 include_directories(${PROJECT_SOURCE_DIR}/dep/stbi)
@@ -113,6 +120,7 @@ add_compile_definitions(CARDBOARD_WINDOWS_TARGET_GLFW)
 
 set(CARDBOARD_CORE_SOURCES ${CARDBOARD_CORE_SOURCES}
 	${PROJECT_SOURCE_DIR}/src/core/layer.cpp
+	${PROJECT_SOURCE_DIR}/src/core/timer.cpp
 )
 
 # --------------------------------------------------------------------------------
