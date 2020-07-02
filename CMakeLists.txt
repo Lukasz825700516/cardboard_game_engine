@@ -109,6 +109,13 @@ set(CARDBOARD_WINDOWS_SOURCES ${CARDBOARD_WINDOWS_SOURCES}
 add_compile_definitions(CARDBOARD_WINDOWS_TARGET_GLFW)
 
 # --------------------------------------------------------------------------------
+# CORE
+
+set(CARDBOARD_CORE_SOURCES ${CARDBOARD_CORE_SOURCES}
+	${PROJECT_SOURCE_DIR}/src/core/layer.cpp
+)
+
+# --------------------------------------------------------------------------------
 # ASSETS
 
 file(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${PROJECT_BINARY_DIR})
@@ -120,6 +127,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_executable(cardboard_game_engine
 	${PROJECT_SOURCE_DIR}/src/main.cpp
+	${CARDBOARD_CORE_SOURCES}
 	${CARDBOARD_WINDOWS_SOURCES}
 	${CARDBOARD_GRAPHICS_SOURCES}
 	${CARDBOARD_DEPENDENCIES_SOURCES}

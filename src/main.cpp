@@ -13,6 +13,7 @@
 #include <vector>
 #include <iostream>
 #include "resources/texture_loader.hpp"
+#include "core/layer.hpp"
 
 extern "C" {
 #include <stb_image.h>
@@ -20,103 +21,127 @@ extern "C" {
 
 namespace cb_g = cardboard::graphics;
 namespace cb_r = cardboard::resources;
+namespace cb_c = cardboard::core;
 
-int main() {
-	cb_g::ContextInstance context_instance;
-	cb_g::Context::set_window(Window("hello world", 800, 600));
 
-	cb_r::KeyboardInstance keyboard_instance(cb_g::Context::get_window());
-	cb_r::MouseInstance mouse_instance(cb_g::Context::get_window());
-	cb_g::QuadRendererInstance quad_renderer_instance(1000, 1000);
+class SetupRenderingLayer : public cb_c::Layer {
+	cb_g::QuadRendererInstance quad_renderer_instance;
 	cb_g::ParticleSystemInstance particle_system_instance;
+	double time;
+public:
 
-	cb_g::Camera camera(glm::vec2(800, 600));
-	cb_g::Shader shader_program(
-			cb_r::File::read("assets/simple.vertex.glsl")->c_str(),
-			cb_r::File::read("assets/simple.fragment.glsl")->c_str());
-	cb_g::Texture texture_0(cb_r::TextureLoader::load_texture("assets/sample.png").value());
-	cb_g::Texture texture_1(cb_r::TextureLoader::load_texture("assets/soup.png").value());
-	cb_g::Particle simple_particle_template;
-	simple_particle_template
-		.set_life_time(10)
-		.set_size(glm::vec2(10), glm::vec2(20))
-		.set_color(glm::vec4(1, 0, 0, 1), glm::vec4(0.75, 0.25, 0, 0));
-	float time = 0;
-	glm::vec2 position = glm::vec2(400, 300);
-	glm::vec2 last_mouse_position = glm::vec2(0.0);
+	SetupRenderingLayer():
+   		quad_renderer_instance(2000, 2000),
+   		particle_system_instance() { }
 
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-	ImGui::StyleColorsDark();
-
-	ImGui_ImplGlfw_InitForOpenGL(cb_g::Context::get_window().get_data().window, true);
-	ImGui_ImplOpenGL3_Init("#version 330 core");
-
-	while (!cb_g::Context::get_window().should_close()) {
+	void update(float) {
+		double current_time = glfwGetTime();
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		// Keyboard camera movement
-		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_LEFT))
-			position.x -= 10;
-		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_RIGHT))
-			position.x += 10;
-		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_UP)) 
-			position.y += 10;
-		if (cb_r::Keyboard::is_key_pressed(cb_r::KeyboardKey::CARDBOARD_KEYBOARD_DOWN)) 
-			position.y -= 10;
+		Layer::update(current_time - time);
 
-		// Mouse camera movement
-		glm::vec2 mouse_position = cb_r::Mouse::get_position();
-		if (cb_r::Mouse::is_button_pressed(cb_r::MouseKey::CARDBOARD_MOUSE_LEFT)) {
-			position += mouse_position - last_mouse_position;
-		}
-		last_mouse_position = mouse_position;
+		cb_g::Context::get_window().swap_buffers();
+		cb_g::Context::get_window().poll_events();
+		time = current_time;
+	}
+};
 
-		// Update something
-		simple_particle_template
-			.set_position(glm::vec2(std::sin(time), std::cos(time)) * 10.0f + position)
-			.set_velocity(glm::vec2(std::sin(time) * 2.0f, 10))
-			.set_acceleration(glm::vec2(2, std::cos(time) + 1) / 2.0f);
+class SetupInputsLayer : public cb_c::Layer {
+	cb_r::KeyboardInstance keyboard_instance;
+	cb_r::MouseInstance mouse_instance;
+public:
 
-		cb_g::ParticleSystem::summon(simple_particle_template);
-		cb_g::ParticleSystem::update(0.1);
+	SetupInputsLayer():
+   		keyboard_instance(cb_g::Context::get_window()),
+   		mouse_instance(cb_g::Context::get_window()) { }
 
-		// Render something
-		camera.set_position(position);
-		cb_g::QuadRenderer::create_scene(camera, shader_program);
+	void update(float) {}
+};
 
-		cb_g::QuadRenderer::draw(glm::vec2(10, 10), glm::vec2(80, 220), texture_0);
-		cb_g::QuadRenderer::draw(glm::vec2(800 - (80 + 10), 600 - (220 + 10)), glm::vec2(80, 220), texture_0, glm::vec4(0, 1, 0, 0.5));
-		cb_g::QuadRenderer::draw_rotated(glm::vec2(400, 300), glm::vec2(200, 200), 45, texture_1);
+class ImGuiLayer : public cb_c::Layer {
+public:
 
-		cb_g::ParticleSystem::draw<cb_g::QuadRenderer>(texture_1);
+	ImGuiLayer() {
+		IMGUI_CHECKVERSION();
+		ImGui::CreateContext();
+		ImGuiIO& io = ImGui::GetIO(); (void)io;
 
-		// Flush everything to gpu
-		
+		ImGui::StyleColorsDark();
+
+		ImGui_ImplGlfw_InitForOpenGL(cb_g::Context::get_window().get_data().window, true);
+		ImGui_ImplOpenGL3_Init("#version 330 core");
+	}
+
+	~ImGuiLayer() {
+		ImGui_ImplOpenGL3_Shutdown();
+		ImGui_ImplGlfw_Shutdown();
+	}
+
+	void update(float time_delta) {
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		ImGui::Begin("Test");
-		ImGui::InputFloat4("Particle collor", (float*)&simple_particle_template.color);
-		ImGui::End();
+		Layer::update(time_delta);
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	}
+};
+
+class SetupContextLayer : public cb_c::Layer {
+	cb_g::ContextInstance context_instance;
+public:
+
+	SetupContextLayer() {
+		cb_g::Context::set_window(Window("hello world", 800, 600));
+	}
+};
+
+class DemoLayer : public cb_c::Layer {
+	cb_g::Camera camera = cb_g::Camera(glm::vec2(800, 600));
+	cb_g::Shader shader_program = cb_g::Shader(
+			cb_r::File::read("assets/simple.vertex.glsl")->c_str(),
+			cb_r::File::read("assets/simple.fragment.glsl")->c_str());
+	cb_g::Texture texture_0 = cb_g::Texture(cb_r::TextureLoader::load_texture("assets/sample.png").value());
+	cb_g::Texture texture_1 = cb_g::Texture(cb_r::TextureLoader::load_texture("assets/soup.png").value());
+	cb_g::Particle simple_particle_template;
+public:
+	DemoLayer() {
+		simple_particle_template
+			.set_life_time(10)
+			.set_size(glm::vec2(10), glm::vec2(20))
+			.set_color(glm::vec4(1, 0, 0, 1), glm::vec4(0.75, 0.25, 0, 0));
+
+	}
+
+	void update(float time_delta) {
+		cb_g::ParticleSystem::update(time_delta);
+
+		cb_g::QuadRenderer::create_scene(camera, shader_program);
+
+		cb_g::QuadRenderer::draw({0,0}, {10, 10});
 
 		cb_g::QuadRenderer::flush();
 
-		cb_g::Context::get_window().swap_buffers();
-		cb_g::Context::get_window().poll_events();
-
-		time += 1;
+		ImGui::Begin("TEST");
+		ImGui::Text("hello world!");
+		ImGui::End();
 	}
+};
 
-	ImGui_ImplOpenGL3_Shutdown();
-	ImGui_ImplGlfw_Shutdown();
+
+int main() {
+	std::unique_ptr<cb_c::Layer> root_layer = std::make_unique<SetupContextLayer>();
+	root_layer
+		->add_layer<SetupRenderingLayer>()
+		->add_layer<ImGuiLayer>()
+		->add_layer<DemoLayer>();
+
+	while (!cb_g::Context::get_window().should_close()) {
+		root_layer->update(0);
+	}
 
 	return 0;
 }
